@@ -70,7 +70,6 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .ud-item.danger { color: #c0392b; }
 .ud-item.danger svg { color: #c0392b; }
 
-/* PAGE SYSTEM */
 .page-content { display: none; }
 .page-content.visible { display: block; }
 .page-wrapper { max-width: 1400px; margin: 0 auto; padding: 24px 28px; }
@@ -82,7 +81,6 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .btn-add:hover { background: #5a2800; }
 .btn-add svg { width: 16px; height: 16px; }
 
-/* === MEMBER PAGE (unchanged) === */
 .search-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px 14px 0 0; padding: 20px 22px; margin-bottom: 0; box-shadow: 0 1px 4px rgba(90,45,0,0.06); border-bottom: none; }
 .search-card-title { font-size: 16px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 16px; display: flex; align-items: center; gap: 7px; }
 .search-card-title svg { width: 15px; height: 15px; }
@@ -180,7 +178,6 @@ tr:hover td { background: var(--row-hover) !important; }
 .empty-state svg { width: 48px; height: 48px; color: #c8b890; margin: 0 auto 14px; display: block; }
 .empty-state p { font-size: 16px; color: var(--text-muted); }
 
-/* === MODAL BASE === */
 .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(30,10,0,0.5); z-index: 500; align-items: flex-start; justify-content: center; padding: 20px; overflow-y: auto; }
 .modal-overlay.show { display: flex; }
 .add-modal { background: #fff; border-radius: 18px; width: 100%; max-width: 720px; box-shadow: 0 20px 80px rgba(0,0,0,0.25); margin: auto; overflow: hidden; }
@@ -304,62 +301,45 @@ tr:hover td { background: var(--row-hover) !important; }
 .back-to-top:hover { background: #5a2800; }
 .back-to-top svg { width: 20px; height: 20px; }
 
-/* ============================================================
-   ĐỀ XUẤT CÔNG VIỆC — NEW STYLES
-   ============================================================ */
-/* Nút đề xuất màu xanh lá */
+/* ĐỀ XUẤT CÔNG VIỆC */
 .btn-propose { display: flex; align-items: center; gap: 7px; padding: 9px 18px; background: var(--green-main); color: #fff; border: none; border-radius: 9px; font-size: 16px; font-weight: 700; font-family: inherit; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
 .btn-propose:hover { background: var(--green-dark); }
 .btn-propose svg { width: 16px; height: 16px; }
-
-/* Filter bar trang đề xuất */
 .dxcv-filter-bar { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; margin-bottom: 18px; box-shadow: 0 1px 4px rgba(90,45,0,0.06); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .dxcv-filter-bar .form-label { white-space: nowrap; }
 .dxcv-filter-bar .form-select, .dxcv-filter-bar .form-input { height: 36px; font-size: 15px; }
 .filter-group { display: flex; align-items: center; gap: 8px; }
-
-/* Bảng đề xuất */
 .dxcv-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 1px 4px rgba(90,45,0,0.06); overflow: hidden; }
 .dxcv-card-header { padding: 16px 22px; border-bottom: 2px solid #d4c8b0; display: flex; align-items: center; gap: 10px; }
 .dxcv-card-header-title { font-size: 16px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.7px; }
 .dxcv-card-header-count { background: #fef6d6; color: #7a3a00; border: 1px solid #f0c840; border-radius: 20px; font-size: 13px; font-weight: 800; padding: 2px 10px; }
-
-/* Priority badges */
 .badge-gap { background: #fff0f0; color: #c0392b; border: 1px solid #f0b8b8; }
 .badge-binh { background: #e8f0fe; color: #1a3a8b; border: 1px solid #a0b8f0; }
-
-/* Status badges đề xuất */
 .badge-cho-tiep { background: #fff8e6; color: #8b5a00; border: 1px solid #f0c840; }
 .badge-da-tiep { background: #e8f5ee; color: #1a6b3a; border: 1px solid #a0d8b0; }
-
-/* Like button */
 .like-btn { display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 20px; border: 1.5px solid #d4c8b0; background: #fff; cursor: pointer; font-size: 14px; font-weight: 700; color: var(--text-muted); font-family: inherit; transition: all 0.18s; white-space: nowrap; }
 .like-btn:hover { border-color: #4a90d9; color: #1a5fa8; background: #e8f0fe; }
 .like-btn.liked { border-color: #4a90d9; color: #fff; background: #3b82f6; }
 .like-btn.liked:hover { background: #2563eb; }
 .like-btn svg { width: 15px; height: 15px; }
-
-/* Col widths cho bảng đề xuất */
 .dx-col-stt { width: 48px; text-align: center; }
-.dx-col-tieu { min-width: 200px; }
-.dx-col-ban-de { min-width: 140px; }
-.dx-col-ban-nhan { min-width: 140px; }
+.dx-col-tieu { min-width: 180px; }
+.dx-col-ban-de { min-width: 130px; }
+.dx-col-ban-nhan { min-width: 130px; }
 .dx-col-uu { width: 110px; }
-.dx-col-tgian { width: 110px; }
+/* [3] Ngày đậm hơn */
+.dx-col-tgian { width: 110px; font-weight: 800; color: var(--text-main) !important; }
 .dx-col-tt { width: 120px; }
-.dx-col-like { width: 110px; text-align: center; }
-.dx-col-xem { width: 80px; text-align: center; }
-
-/* View detail modal đề xuất */
-.dxcv-detail-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
-.dxcv-detail-badge-wrap { display: flex; flex-direction: column; gap: 6px; }
+.dx-col-like { width: 130px; text-align: center; }
+.dx-col-xem { width: 70px; text-align: center; }
+/* [2] Cột ghi chú */
+.dx-col-ghichu { min-width: 130px; max-width: 180px; }
+.dx-col-ghichu-text { font-size: 14px; color: var(--text-muted); font-style: italic; line-height: 1.4; }
 .dxcv-noidung-box { background: #faf7f2; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; font-size: 15px; line-height: 1.7; color: var(--text-main); min-height: 80px; margin-bottom: 16px; }
 .dxcv-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .dxcv-meta-item { display: flex; flex-direction: column; gap: 3px; }
 .dxcv-meta-label { font-size: 12px; font-weight: 700; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.5px; }
 .dxcv-meta-value { font-size: 15px; font-weight: 600; color: var(--text-main); }
-
-/* HTML editor vùng nhập nội dung đề xuất */
 .html-editor-wrap { border: 1.5px solid var(--input-border); border-radius: 8px; overflow: hidden; transition: border-color 0.15s; }
 .html-editor-wrap:focus-within { border-color: var(--input-focus); }
 .html-editor-toolbar { display: flex; gap: 2px; padding: 6px 8px; background: #f5f0e8; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
@@ -369,13 +349,15 @@ tr:hover td { background: var(--row-hover) !important; }
 .he-sep { width: 1px; background: var(--border); margin: 2px 4px; align-self: stretch; }
 .html-editor-content { min-height: 120px; padding: 10px 14px; font-size: 15px; font-family: 'Be Vietnam Pro', sans-serif; color: var(--text-main); outline: none; line-height: 1.7; }
 
-/* Readonly field */
-.readonly-field { height: 38px; border: 1.5px solid #e8e0d0; border-radius: 8px; padding: 0 12px; font-size: 15px; font-family: inherit; color: var(--text-muted); background: #f5f0e8; display: flex; align-items: center; font-weight: 600; }
+/* [5] Danh sách ban đã tiếp nhận trong detail */
+.tiep-nhan-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.tiep-nhan-item { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; background: #e8f5ee; color: #1a6b3a; border: 1px solid #a0d8b0; border-radius: 20px; font-size: 13px; font-weight: 700; }
+.tiep-nhan-item svg { width: 13px; height: 13px; }
 </style>
 </head>
 <body>
 
-<!-- ============================================================ TOPBAR ============================================================ -->
+<!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-brand">
     <div class="logo-icon">
@@ -409,7 +391,7 @@ tr:hover td { background: var(--row-hover) !important; }
           Quản Lý Công Việc
         </div>
         <div class="hm-item" id="menu-dexuat" onclick="selectMenu('dexuat',this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18.5" x2="14.5" y2="18.5"/></svg>
           Đề Xuất Công Việc
         </div>
       </div>
@@ -452,7 +434,7 @@ tr:hover td { background: var(--row-hover) !important; }
   </div>
 </div>
 
-<!-- ============================================================ PAGE: THÀNH VIÊN ============================================================ -->
+<!-- PAGE: THÀNH VIÊN -->
 <div class="page-content visible" id="page-thanvien">
   <div class="page-wrapper">
     <div class="page-header">
@@ -548,13 +530,13 @@ tr:hover td { background: var(--row-hover) !important; }
   </div>
 </div>
 
-<!-- ============================================================ PAGE: ĐỀ XUẤT CÔNG VIỆC ============================================================ -->
+<!-- PAGE: ĐỀ XUẤT CÔNG VIỆC -->
 <div class="page-content" id="page-dexuat">
   <div class="page-wrapper">
     <div class="page-header">
       <div class="page-title">
         <div class="page-title-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18.5" x2="14.5" y2="18.5"/></svg>
         </div>
         Đề Xuất Công Việc
       </div>
@@ -563,8 +545,6 @@ tr:hover td { background: var(--row-hover) !important; }
         Đề Xuất Công Việc
       </button>
     </div>
-
-    <!-- Filter bar -->
     <div class="dxcv-filter-bar">
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Lọc theo ban:</label>
@@ -590,11 +570,9 @@ tr:hover td { background: var(--row-hover) !important; }
       </div>
       <button class="btn-reset" style="height:36px;" onclick="resetDxFilter()">Đặt lại</button>
     </div>
-
-    <!-- Bảng tiếp nhận -->
     <div class="dxcv-card">
       <div class="dxcv-card-header">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;color:var(--burgundy);"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;color:var(--burgundy);"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
         <span class="dxcv-card-header-title">Danh Sách Đề Xuất</span>
         <span class="dxcv-card-header-count" id="dx-count">0 đề xuất</span>
       </div>
@@ -605,18 +583,19 @@ tr:hover td { background: var(--row-hover) !important; }
               <th class="dx-col-stt">STT</th>
               <th class="dx-col-tieu">Tiêu đề công việc</th>
               <th class="dx-col-ban-de">Ban đề xuất</th>
-              <th class="dx-col-ban-nhan">Ban tiếp nhận</th>
+              <th class="dx-col-ban-nhan">Ban được đề xuất</th>
               <th class="dx-col-uu">Ưu tiên</th>
               <th class="dx-col-tgian">Thời hạn</th>
               <th class="dx-col-tt">Trạng thái</th>
               <th class="dx-col-like">Tiếp nhận</th>
+              <th class="dx-col-ghichu">Ghi chú</th>
               <th class="dx-col-xem">Xem</th>
             </tr>
           </thead>
           <tbody id="dxTableBody"></tbody>
         </table>
         <div id="dxEmptyState" class="empty-state" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
           <p>Chưa có đề xuất công việc nào.</p>
         </div>
       </div>
@@ -624,7 +603,7 @@ tr:hover td { background: var(--row-hover) !important; }
   </div>
 </div>
 
-<!-- ============================================================ MEMBER MODALS (giữ nguyên) ============================================================ -->
+<!-- MEMBER MODALS -->
 <div class="modal-overlay" id="addModal">
   <div class="add-modal" onclick="event.stopPropagation()">
     <div class="add-modal-header">
@@ -791,12 +770,12 @@ tr:hover td { background: var(--row-hover) !important; }
   </div>
 </div>
 
-<!-- ============================================================ POPUP ĐỀ XUẤT CÔNG VIỆC ============================================================ -->
+<!-- POPUP ĐỀ XUẤT CÔNG VIỆC -->
 <div class="modal-overlay" id="proposeModal">
   <div class="add-modal" style="max-width:760px;" onclick="event.stopPropagation()">
     <div class="add-modal-header">
       <div class="add-modal-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18.5" x2="14.5" y2="18.5"/></svg>
         Đề Xuất Công Việc
       </div>
       <button class="close-btn" onclick="closeProposeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
@@ -808,14 +787,16 @@ tr:hover td { background: var(--row-hover) !important; }
           Thông Tin Đề Xuất
         </div>
         <div class="form-grid">
-          <!-- Ban được đề xuất -->
           <div>
-            <div class="add-label">Ban được đề xuất (Ban B) <span class="req">*</span></div>
-            <select class="add-select" id="px_ban_b" onchange="autoTitle()">
+            <div class="add-label">Ban đề xuất <span class="req">*</span></div>
+            <select class="add-select" id="px_ban_a_select"></select>
+          </div>
+          <div>
+            <div class="add-label">Ban được đề xuất <span class="req">*</span></div>
+            <select class="add-select" id="px_ban_b">
               <option value="">— Chọn ban —</option>
             </select>
           </div>
-          <!-- Độ ưu tiên -->
           <div>
             <div class="add-label">Độ ưu tiên <span class="req">*</span></div>
             <select class="add-select" id="px_uutien">
@@ -823,12 +804,15 @@ tr:hover td { background: var(--row-hover) !important; }
               <option value="Gấp">🔴 Gấp</option>
             </select>
           </div>
-          <!-- Tiêu đề -->
+          <div>
+            <div class="add-label">Thời hạn</div>
+            <div class="ndp-wrap" id="px_thoihan_wrap"></div>
+          </div>
+          <!-- [4] Tiêu đề: người dùng tự nhập, không tự động ghi đè -->
           <div class="form-full">
             <div class="add-label">Tiêu đề công việc <span class="req">*</span></div>
-            <input class="add-input" id="px_tieude" placeholder="VD: Ban Tri Sự xin đề xuất công việc với Ban Văn Hóa..." />
+            <textarea class="add-textarea" id="px_tieude" placeholder="Nhập tiêu đề công việc cụ thể..." style="height:56px;resize:vertical;width:100%;"></textarea>
           </div>
-          <!-- Nội dung -->
           <div class="form-full">
             <div class="add-label">Nội dung đề xuất <span class="req">*</span></div>
             <div class="html-editor-wrap">
@@ -845,28 +829,21 @@ tr:hover td { background: var(--row-hover) !important; }
                 <div class="he-sep"></div>
                 <button class="he-btn" title="Xóa định dạng" onclick="heCmd('removeFormat')" style="font-size:12px;">✕</button>
               </div>
-              <div class="html-editor-content" id="px_noidung" contenteditable="true" data-placeholder="Nhập nội dung đề xuất chi tiết..."></div>
+              <div class="html-editor-content" id="px_noidung" contenteditable="true"></div>
             </div>
           </div>
-          <!-- Thời hạn -->
-          <div>
-            <div class="add-label">Thời hạn</div>
-            <div class="ndp-wrap" id="px_thoihan_wrap"></div>
-          </div>
-          <!-- Địa điểm tiếp nhận -->
           <div>
             <div class="add-label">Địa điểm tiếp nhận <span style="font-size:13px;color:#b09070;font-weight:400;">(nếu có)</span></div>
-            <input class="add-input" id="px_diadiem" placeholder="VD: Phòng họp tầng 2, Nhà khách..." />
+            <input class="add-input" id="px_diadiem" placeholder="VD: Phòng họp tầng 2..." />
           </div>
-          <!-- Người liên hệ -->
           <div>
             <div class="add-label">Người liên hệ <span style="font-size:13px;color:#b09070;font-weight:400;">(Tên - SĐT)</span></div>
             <input class="add-input" id="px_lienhe" placeholder="VD: Phan Tuấn Anh - 0901234567" />
           </div>
-          <!-- Ban đề xuất (auto) -->
-          <div>
-            <div class="add-label">Ban đề xuất (Ban A)</div>
-            <div class="readonly-field" id="px_ban_a">Ban Tri Sự · Phan Tuấn Anh · Trưởng Ban</div>
+          <!-- [2] Ghi chú trong form đề xuất -->
+          <div class="form-full">
+            <div class="add-label">Ghi chú <span style="font-size:13px;color:#b09070;font-weight:400;">(nếu có)</span></div>
+            <input class="add-input" id="px_ghichu" placeholder="VD: Ưu tiên xử lý trước lễ, cần phối hợp thêm ban Y..." style="width:100%;" />
           </div>
         </div>
       </div>
@@ -883,7 +860,7 @@ tr:hover td { background: var(--row-hover) !important; }
 
 <!-- MODAL XEM CHI TIẾT ĐỀ XUẤT -->
 <div class="modal-overlay" id="dxViewModal">
-  <div class="add-modal" style="max-width:640px;" onclick="event.stopPropagation()">
+  <div class="add-modal" style="max-width:660px;" onclick="event.stopPropagation()">
     <div class="add-modal-header">
       <div class="add-modal-title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -914,9 +891,7 @@ tr:hover td { background: var(--row-hover) !important; }
 </button>
 
 <script>
-/* ============================================================
-   ÂM LỊCH UTILS (giữ nguyên)
-   ============================================================ */
+/* ÂM LỊCH UTILS */
 const LUN_CAN=['Giáp','Ất','Bính','Đinh','Mậu','Kỷ','Canh','Tân','Nhâm','Quý'];
 const LUN_CHI=['Tý','Sửu','Dần','Mão','Thìn','Tỵ','Ngọ','Mùi','Thân','Dậu','Tuất','Hợi'];
 function lunJd(d,m,y){const a=Math.floor((14-m)/12),yy=y+4800-a,mm=m+12*a-3;let j=d+Math.floor((153*mm+2)/5)+365*yy+Math.floor(yy/4)-Math.floor(yy/100)+Math.floor(yy/400)-32045;if(j<2299161)j=d+Math.floor((153*mm+2)/5)+365*yy+Math.floor(yy/4)-32083;return j;}
@@ -927,9 +902,7 @@ function lunLeapOff(a11,tz){const k=Math.floor((a11-2415021.076998695)/29.530588
 function solar2Lunar(d,m,y){const tz=7,jd=lunJd(d,m,y),k=Math.floor((jd-2415021.076998695)/29.530588853);let ms=lunNewMoon(k+1,tz);if(ms>jd)ms=lunNewMoon(k,tz);let a11=lunMonth11(y,tz),b11=a11,ly;if(a11>=ms){ly=y;a11=lunMonth11(y-1,tz);}else{ly=y+1;b11=lunMonth11(y+1,tz);}const lday=jd-ms+1,diff=Math.floor((ms-a11)/29);let leap=0,lm=diff+11;if(b11-a11>365){const lo=lunLeapOff(a11,tz);if(diff>=lo){lm=diff+10;if(diff===lo)leap=1;}}if(lm>12)lm-=12;if(lm>=11&&diff<4)ly--;return{day:lday,month:lm,year:ly,isLeap:leap===1,can:LUN_CAN[(ly+6)%10],chi:LUN_CHI[(ly+8)%12]};}
 (function(){const n=new Date();const lun=solar2Lunar(n.getDate(),n.getMonth()+1,n.getFullYear());const THU=['Chủ Nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];const dd=String(n.getDate()).padStart(2,'0'),mm=String(n.getMonth()+1).padStart(2,'0');document.getElementById('dtDuong').textContent=`${THU[n.getDay()]}, ${dd}/${mm}/${n.getFullYear()}`;document.getElementById('dtAm').textContent=`🌙 ${lun.day} tháng ${lun.month} Âm Lịch`;})();
 
-/* ============================================================
-   NDP DATE PICKER (giữ nguyên)
-   ============================================================ */
+/* NDP DATE PICKER */
 const NDP_MONTHS=['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
 let ndpInstances={},ndpOpenId=null;
 function createNdp(containerId,initialVal,onChange){const today=new Date();let viewY=today.getFullYear(),viewM=today.getMonth(),selDate=null,panel='cal',yearRangeStart=Math.floor(viewY/20)*20;if(initialVal){const p=initialVal.split('-');if(p[0]&&p[1]&&p[2]){selDate=new Date(parseInt(p[0]),parseInt(p[1])-1,parseInt(p[2]));viewY=selDate.getFullYear();viewM=selDate.getMonth();}}const wrap=document.getElementById(containerId);if(!wrap)return null;ndpInstances[containerId]={viewY,viewM,selDate,panel,yearRangeStart,onChange};renderNdp(containerId);}
@@ -948,9 +921,7 @@ function ndpSelectDay(id,y,m,d){const inst=ndpInstances[id];inst.selDate=new Dat
 function ndpGetValue(id){const inst=ndpInstances[id];if(!inst||!inst.selDate)return'';return`${inst.selDate.getFullYear()}-${String(inst.selDate.getMonth()+1).padStart(2,'0')}-${String(inst.selDate.getDate()).padStart(2,'0')}`;}
 document.addEventListener('click',()=>{if(ndpOpenId){ndpOpenId=null;Object.keys(ndpInstances).forEach(id=>renderNdp(id));}});
 
-/* ============================================================
-   DATA & CONSTANTS (giữ nguyên)
-   ============================================================ */
+/* DATA & CONSTANTS */
 const ALL_BANS=['Ban Tri Sự','Ban Quản Chúng','Ban Văn Hóa Truyền Thông','Ban Giáo Dục Thanh Thiếu Niên','Ban Tài Chính','Ban Văn Phòng','Ban Nhân Sự - Tiền Lương','Ban Tiếp Tăng Độ Chúng','Ban Chăm Sóc Người Cao Tuổi','Ban Tổ Chức Sự Kiện','Ban An Sinh','Ban Hướng Dẫn Phật Tử','Ban Hỗ Trợ Chùa Vệ Tinh','Ban Hương Đăng','Ban Nghi Lễ','Ban Môi Trường','Ban May','Ban Y Tế','Ban Đời Sống','Ban Quốc Tế','Ban Hành Hương','Ban Quản Lý Dự Án','Ban Vật Tư','Ban Cơ Giới - Vận Tải','Ban Trang Trí Khánh Tiết','Ban Bảo Tàng','Ban Thư Viện','Ban Thị Giả','Ban Tri Khố','Ban An Ninh','Ban Vườn'];
 const CHUC=['Trưởng ban','Phó ban','Tổ trưởng','Tổ phó','Thành viên'];
 const NAMES=[['Phan Tuấn Anh','Minh Đức'],['Nguyễn Minh Phúc','Thiện Nhân'],['Lê Thanh Hương','Diệu Liên'],['Trần Thị Mai','Quảng Minh'],['Phạm Đức Trung','Giác Ngộ'],['Hoàng Văn Bình','Thiện Tâm'],['Vũ Thị Lan','Diệu Hoa'],['Đặng Quốc Khánh','Minh Trí'],['Bùi Thị Thu','Diệu Từ'],['Lý Thành Nam','Pháp Duyên'],['Ngô Thị Hà','Diệu Phúc'],['Đinh Văn Long','Thiện Bảo'],['Cao Thị Yến','Quảng Lâm'],['Trịnh Đức Tài','Minh Huệ'],['Mai Thị Loan','Diệu Đức'],['Dương Văn Khoa','Thiện Kiến'],['Tạ Thị Ngọc','Giác Từ'],['Lưu Văn Hải','Pháp Minh'],['Hồ Thị Bích','Diệu Tịnh'],['Lương Đức Hùng','Minh Tâm'],['Phan Thị Thảo','Quảng Nhân'],['Nguyễn Văn Sơn','Thiện Nguyện'],['Trần Thị Dung','Diệu Thiện'],['Lê Văn Quân','Minh Bảo'],['Phạm Thị Cúc','Giác Hoa'],['Hoàng Thị Kim','Diệu Quang'],['Vũ Đức Thắng','Thiện Phúc'],['Đặng Thị Nga','Quảng Đức'],['Bùi Văn Tuấn','Minh Không'],['Lý Thị Trang','Diệu Giác'],['Ngô Văn Dũng','Pháp Hỷ'],['Đinh Thị Hoa','Giác Tịnh'],['Cao Văn Đức','Thiện Sỹ'],['Trịnh Thị Lan','Diệu Nghiêm'],['Mai Văn Phong','Minh Đạo'],['Dương Thị Thủy','Quảng Từ'],['Tạ Văn Bảo','Giác Huệ'],['Lưu Thị Hạnh','Diệu Bảo'],['Hồ Văn Tùng','Pháp Hòa'],['Lương Thị Vân','Thiện Giác'],['Phan Văn Đạt','Minh Nhẫn'],['Nguyễn Thị Lệ','Diệu Vân'],['Trần Văn Phú','Quảng Minh'],['Lê Thị Nhung','Giác Từ'],['Phạm Văn Tân','Thiện Tự'],['Hoàng Thị Xuân','Diệu Tâm'],['Vũ Văn Nghĩa','Minh Nguyện'],['Đặng Văn Công','Pháp Bảo'],['Bùi Thị Liên','Quảng Đạo'],['Lý Văn Bình','Thiện Ngộ']];
@@ -961,9 +932,7 @@ let filteredData=[];
 function genMa(i){return'CBV'+String(i).padStart(5,'0');}
 (function(){for(let i=0;i<50;i++){const nm=NAMES[i%NAMES.length];const banArr=[ALL_BANS[i%ALL_BANS.length]];if(i%7===0&&i>0)banArr.push(ALL_BANS[(i+10)%ALL_BANS.length]);const chucIdx=i<3?0:(i<8?1:(i<15?2:(i<22?3:4)));members.push({id:idCounter,ma:genMa(idCounter),ten:nm[0],phapDanh:nm[1],ngaySinh:`${1960+(i%40)}-${String((i%12)+1).padStart(2,'0')}-${String((i%28)+1).padStart(2,'0')}`,gioiTinh:nm[0].includes('Thị')?'Nữ':'Nam',sdt:SDTS[i%SDTS.length],email:i%3===0?`tv${idCounter}@chua.vn`:'',chucDanh:CHUC[chucIdx],banLamViec:banArr,trangThai:i<40?'Đang làm việc':(i<46?'Đang nghỉ phép':'Đã nghỉ'),phanLoai:i%5===0?'Công nhân':'Công quả',ghiChu:'',batDau:`${2000+(i%20)}-01-01`,qltt:'',avatar:''});idCounter++;}})();
 
-/* ============================================================
-   TOPBAR / MENU (cập nhật cho page mới)
-   ============================================================ */
+/* TOPBAR / MENU */
 let hmOpen=false,udOpen=false;
 function toggleHamburger(e){e.stopPropagation();if(udOpen){udOpen=false;document.getElementById('udMenu').classList.remove('open');}hmOpen=!hmOpen;document.getElementById('hmMenu').classList.toggle('open',hmOpen);document.getElementById('hamburgerBtn').classList.toggle('active',hmOpen);}
 function selectMenu(k,el){
@@ -972,7 +941,6 @@ function selectMenu(k,el){
   hmOpen=false;
   document.getElementById('hmMenu').classList.remove('open');
   document.getElementById('hamburgerBtn').classList.remove('active');
-  // Ẩn tất cả pages
   document.querySelectorAll('.page-content').forEach(p=>p.classList.remove('visible'));
   if(k==='thanvien'){
     document.getElementById('page-thanvien').classList.add('visible');
@@ -982,7 +950,6 @@ function selectMenu(k,el){
     renderDxTable();
   } else {
     showToast('⚙️ Chức năng "'+el.textContent.trim()+'" đang phát triển...');
-    // Quay về trang thành viên nếu không có page
     document.getElementById('page-thanvien').classList.add('visible');
     document.getElementById('menu-thanvien').classList.add('active');
     el.classList.remove('active');
@@ -992,9 +959,7 @@ function toggleUserMenu(e){e.stopPropagation();if(hmOpen){hmOpen=false;document.
 document.addEventListener('click',()=>{hmOpen=false;udOpen=false;document.getElementById('hmMenu').classList.remove('open');document.getElementById('hamburgerBtn').classList.remove('active');document.getElementById('udMenu').classList.remove('open');closeMs();closeAllModalMs();});
 window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>300);});
 
-/* ============================================================
-   MEMBER PAGE — SEARCH / MULTISELECT (giữ nguyên)
-   ============================================================ */
+/* MEMBER PAGE — SEARCH / MULTISELECT */
 let msSelected=[],msOpen=false,msFilter='';
 function buildMsList(){const list=document.getElementById('msList');const q=msFilter.toLowerCase();const filtered=ALL_BANS.filter(b=>b.toLowerCase().includes(q));let html='';filtered.forEach(b=>{const key=b.replace(/[^a-zA-Z0-9]/g,'_');html+=`<div class="ms-item"><input type="checkbox" id="ms_${key}" value="${b}"${msSelected.includes(b)?' checked':''} onchange="onMsChange('${b.replace(/'/g,"\\'")}',this.checked)"/><label for="ms_${key}">${b}</label></div>`;});if(!html)html='<div style="padding:12px 14px;font-size:16px;color:var(--text-muted);">Không tìm thấy</div>';list.innerHTML=html;}
 function onMsChange(val,checked){if(checked){if(!msSelected.includes(val))msSelected.push(val);}else{msSelected=msSelected.filter(x=>x!==val);}updateMsTrigger();}
@@ -1017,9 +982,7 @@ function selectAllModalMs(prefix){const q=modalMsState[prefix].filter.toLowerCas
 function clearModalMs(prefix){modalMsState[prefix].selected=[];buildModalMsList(prefix);updateModalMsTrigger(prefix);}
 function updateQlttOptions(qlttId){const qlttEl=document.getElementById(qlttId);const ban=modalMsState['add'].selected[0]||'';const sup=members.filter(m=>(!ban||m.banLamViec.includes(ban))&&['Trưởng ban','Phó ban','Tổ trưởng'].includes(m.chucDanh));qlttEl.innerHTML='<option value="">— Không có / Bỏ qua —</option>'+sup.map(m=>`<option value="${m.id}">${m.ten} (${m.chucDanh})</option>`).join('');}
 
-/* ============================================================
-   MEMBER PAGE — TABLE RENDER (giữ nguyên)
-   ============================================================ */
+/* MEMBER TABLE RENDER */
 function doSearch(){const txt=document.getElementById('searchText').value.toLowerCase().trim();const chuc=document.getElementById('searchChuc').value;const tt=document.getElementById('searchTT').value;filteredData=members.filter(m=>{if(txt&&!m.ma.toLowerCase().includes(txt)&&!m.ten.toLowerCase().includes(txt))return false;if(chuc&&m.chucDanh!==chuc)return false;if(msSelected.length>0&&!m.banLamViec.some(b=>msSelected.includes(b)))return false;if(tt&&m.trangThai!==tt)return false;return true;});currentPage=1;renderTable();}
 function doReset(){document.getElementById('searchText').value='';document.getElementById('searchChuc').value='';document.getElementById('searchTT').value='Đang làm việc';msSelected=[];updateMsTrigger();msFilter='';doSearch();}
 function chucBadge(c){const map={'Trưởng ban':'truong-ban','Phó ban':'pho-ban','Tổ trưởng':'to-truong','Tổ phó':'to-pho','Thành viên':'thanh-vien'};return`<span class="badge badge-${map[c]||'thanh-vien'}">${c}</span>`;}
@@ -1029,9 +992,7 @@ function renderTable(){const start=(currentPage-1)*PAGE_SIZE;const page=filtered
 function renderPagination(){const tp=Math.ceil(filteredData.length/PAGE_SIZE);const start=(currentPage-1)*PAGE_SIZE+1;const end=Math.min(currentPage*PAGE_SIZE,filteredData.length);document.getElementById('pgInfo').textContent=filteredData.length>0?`Hiển thị ${start}–${end} trong tổng số ${filteredData.length} thành viên`:'';if(tp<=1){document.getElementById('pgControls').innerHTML='';return;}let html=`<button class="pg-btn" onclick="goPage(${currentPage-1})"${currentPage===1?' disabled':''}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>`;for(let p=1;p<=tp;p++){if(p===1||p===tp||(p>=currentPage-2&&p<=currentPage+2))html+=`<button class="pg-btn${p===currentPage?' active':''}" onclick="goPage(${p})">${p}</button>`;else if(p===currentPage-3||p===currentPage+3)html+=`<span style="padding:0 4px;color:var(--text-muted);">…</span>`;}html+=`<button class="pg-btn" onclick="goPage(${currentPage+1})"${currentPage===tp?' disabled':''}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>`;document.getElementById('pgControls').innerHTML=html;}
 function goPage(p){const tp=Math.ceil(filteredData.length/PAGE_SIZE);if(p<1||p>tp)return;currentPage=p;renderTable();window.scrollTo({top:0,behavior:'smooth'});}
 
-/* ============================================================
-   MEMBER MODAL FUNCTIONS (giữ nguyên)
-   ============================================================ */
+/* MEMBER MODAL FUNCTIONS */
 function previewAvatar(input,imgId,phId){const file=input.files[0];if(!file)return;const reader=new FileReader();reader.onload=e=>{const img=document.getElementById(imgId),ph=document.getElementById(phId);img.src=e.target.result;img.style.display='block';if(ph)ph.style.display='none';};reader.readAsDataURL(file);}
 function openAddModal(){document.getElementById('newMaDisplay').textContent=genMa(idCounter);document.getElementById('add_avatar_img').style.display='none';document.getElementById('add_avatar_img').src='';document.getElementById('add_avatar_placeholder').style.display='flex';document.getElementById('add_avatar_file').value='';modalMsState.add.selected=[];modalMsState.add.filter='';updateModalMsTrigger('add');ndpInstances['add_ngay_wrap']=null;createNdp('add_ngay_wrap','',null);ndpInstances['add_batdau_wrap']=null;createNdp('add_batdau_wrap','',null);['f_ten','f_sdt','f_email','f_ghichu','f_phap'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});document.getElementById('f_chuc').value='';document.getElementById('f_trangthai').value='Đang làm việc';document.getElementById('f_phanloai').value='Công quả';document.querySelector('input[name="gioitinh_add"][value="Nam"]').checked=true;updateQlttOptions('f_qltt');document.getElementById('addModal').classList.add('show');document.body.style.overflow='hidden';}
 function closeAddModal(){document.getElementById('addModal').classList.remove('show');document.body.style.overflow='';}
@@ -1051,49 +1012,91 @@ function alertField(id,msg){const el=document.getElementById(id);if(!el)return;e
 let toastTimer;
 function showToast(msg,bg='#2d6a4f'){const t=document.getElementById('toast');t.textContent=msg;t.style.background=bg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),3000);}
 
-/* ============================================================
-   ĐỀ XUẤT CÔNG VIỆC — DATA & LOGIC (MỚI)
-   ============================================================ */
-// Người dùng hiện tại (Ban A)
+/* ĐỀ XUẤT CÔNG VIỆC */
 const CURRENT_USER = { ten: 'Phan Tuấn Anh', chucDanh: 'Trưởng Ban', ban: 'Ban Tri Sự' };
 
-// DB đề xuất
-let proposeDB = [];
-let proposeCounter = 1;
+// [1] Dữ liệu mẫu sẵn để demo, bao gồm đề xuất đã có người tiếp nhận
+let proposeDB = [
+  {
+    id: 1,
+    banA: 'Ban Tri Sự',
+    nguoiTao: 'Phan Tuấn Anh',
+    chucDanhTao: 'Trưởng Ban',
+    banB: 'Ban Hương Đăng',
+    tieude: 'Hỗ trợ chuẩn bị đèn nến cho Đại Lễ Phật Đản',
+    noidung: '<p>Kính đề xuất Ban Hương Đăng hỗ trợ chuẩn bị toàn bộ đèn nến, hương liệu phục vụ Đại Lễ Phật Đản 2026. Số lượng dự kiến khoảng 500 cây nến và 200 bó nhang.</p>',
+    uutien: 'Gấp',
+    thoihan: '2026-05-15',
+    diadiem: 'Chánh điện tầng 1',
+    lienhe: 'Phan Tuấn Anh - 0901234567',
+    ghichu: 'Cần hoàn tất trước ngày 15/05',
+    ngayTao: '2026-05-08',
+    trangThai: 'Đã tiếp nhận',
+    // [5] Lưu danh sách ban đã like kèm tên
+    likers: [{ ban: 'Ban Hương Đăng', nguoi: 'Nguyễn Minh Phúc' }],
+    likedByMe: false
+  },
+  {
+    id: 2,
+    banA: 'Ban Văn Hóa Truyền Thông',
+    nguoiTao: 'Lê Thanh Hương',
+    chucDanhTao: 'Phó Ban',
+    banB: 'Ban Tổ Chức Sự Kiện',
+    tieude: 'Phối hợp ghi hình buổi lễ Vu Lan tháng 7',
+    noidung: '<p>Đề xuất Ban Tổ Chức Sự Kiện phối hợp cung cấp lịch trình chi tiết và địa điểm cụ thể để Ban Văn Hóa Truyền Thông bố trí ekip quay phim chuyên nghiệp.</p>',
+    uutien: 'Bình thường',
+    thoihan: '2026-06-20',
+    diadiem: 'Hội trường lớn',
+    lienhe: 'Lê Thanh Hương - 0912345678',
+    ghichu: '',
+    ngayTao: '2026-05-09',
+    trangThai: 'Chờ tiếp nhận',
+    likers: [],
+    likedByMe: false
+  },
+  {
+    id: 3,
+    banA: 'Ban Y Tế',
+    nguoiTao: 'Trần Thị Mai',
+    chucDanhTao: 'Tổ Trưởng',
+    banB: 'Ban An Sinh',
+    tieude: 'Hỗ trợ khám sức khoẻ miễn phí cho Phật tử cao tuổi',
+    noidung: '<p>Ban Y Tế đề xuất phối hợp với Ban An Sinh tổ chức buổi khám sức khoẻ và phát thuốc miễn phí cho Phật tử cao tuổi, dự kiến 200-300 người.</p>',
+    uutien: 'Bình thường',
+    thoihan: '2026-05-28',
+    diadiem: 'Phòng họp B2',
+    lienhe: 'Trần Thị Mai - 0923456789',
+    ghichu: 'Cần đăng ký trước 1 tuần',
+    ngayTao: '2026-05-10',
+    trangThai: 'Chờ tiếp nhận',
+    likers: [],
+    likedByMe: false
+  }
+];
+let proposeCounter = 4;
 
-// Khởi tạo dropdown ban trong filter và popup
 function initBanDropdowns(){
   const filterEl = document.getElementById('dx-filter-ban');
-  const popupEl = document.getElementById('px_ban_b');
+  const popupBanB = document.getElementById('px_ban_b');
+  const popupBanA = document.getElementById('px_ban_a_select');
   ALL_BANS.forEach(b=>{
     filterEl.innerHTML += `<option value="${b}">${b}</option>`;
-    // Không cho đề xuất sang chính ban mình
-    if(b !== CURRENT_USER.ban){
-      popupEl.innerHTML += `<option value="${b}">${b}</option>`;
-    }
+    popupBanB.innerHTML += `<option value="${b}">${b}</option>`;
+    popupBanA.innerHTML += `<option value="${b}"${b===CURRENT_USER.ban?' selected':''}>${b}</option>`;
   });
 }
 
-// Auto-fill tiêu đề khi chọn ban B
-function autoTitle(){
-  const banB = document.getElementById('px_ban_b').value;
-  if(!banB) return;
-  const banAShort = CURRENT_USER.ban.replace('Ban ','');
-  document.getElementById('px_tieude').value = `${CURRENT_USER.ban.toUpperCase()} XIN ĐỀ XUẤT CÔNG VIỆC VỚI ${banB.toUpperCase()}`;
-}
-
-// HTML editor toolbar
 function heCmd(cmd){ document.getElementById('px_noidung').focus(); document.execCommand(cmd,false,null); }
 
-// Mở popup đề xuất
 function openProposeModal(){
   document.getElementById('px_ban_b').value = '';
-  document.getElementById('px_tieude').value = '';
+  document.getElementById('px_tieude').value = '';   // [4] KHÔNG tự điền tiêu đề
   document.getElementById('px_noidung').innerHTML = '';
   document.getElementById('px_uutien').value = 'Bình thường';
   document.getElementById('px_diadiem').value = '';
   document.getElementById('px_lienhe').value = CURRENT_USER.ten + ' - ';
-  document.getElementById('px_ban_a').textContent = `${CURRENT_USER.ban} · ${CURRENT_USER.ten} · ${CURRENT_USER.chucDanh}`;
+  document.getElementById('px_ghichu').value = '';
+  document.getElementById('px_ban_a_select').value = CURRENT_USER.ban;
   ndpInstances['px_thoihan_wrap'] = null;
   createNdp('px_thoihan_wrap','',null);
   document.getElementById('proposeModal').classList.add('show');
@@ -1104,8 +1107,8 @@ function closeProposeModal(){
   document.body.style.overflow = '';
 }
 
-// Lưu đề xuất
 function savePropose(){
+  const banA = document.getElementById('px_ban_a_select').value;
   const banB = document.getElementById('px_ban_b').value;
   const tieude = document.getElementById('px_tieude').value.trim();
   const noidung = document.getElementById('px_noidung').innerHTML.trim();
@@ -1113,7 +1116,9 @@ function savePropose(){
   const thoihan = ndpGetValue('px_thoihan_wrap');
   const diadiem = document.getElementById('px_diadiem').value.trim();
   const lienhe = document.getElementById('px_lienhe').value.trim();
+  const ghichu = document.getElementById('px_ghichu').value.trim();
 
+  if(!banA){ showToast('⚠️ Vui lòng chọn ban đề xuất','#c0392b'); return; }
   if(!banB){ showToast('⚠️ Vui lòng chọn ban được đề xuất','#c0392b'); return; }
   if(!tieude){ document.getElementById('px_tieude').style.borderColor='#c0392b'; showToast('⚠️ Vui lòng nhập tiêu đề','#c0392b'); setTimeout(()=>document.getElementById('px_tieude').style.borderColor='',1800); return; }
   if(!noidung || noidung==='<br>'){ showToast('⚠️ Vui lòng nhập nội dung đề xuất','#c0392b'); return; }
@@ -1121,19 +1126,11 @@ function savePropose(){
   const now = new Date();
   proposeDB.unshift({
     id: proposeCounter++,
-    banA: CURRENT_USER.ban,
-    nguoiTao: CURRENT_USER.ten,
-    chucDanhTao: CURRENT_USER.chucDanh,
-    banB,
-    tieude,
-    noidung,
-    uutien,
-    thoihan,
-    diadiem,
-    lienhe,
+    banA, nguoiTao: CURRENT_USER.ten, chucDanhTao: CURRENT_USER.chucDanh,
+    banB, tieude, noidung, uutien, thoihan, diadiem, lienhe, ghichu,
     ngayTao: `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`,
     trangThai: 'Chờ tiếp nhận',
-    likes: 0,
+    likers: [],
     likedByMe: false
   });
   closeProposeModal();
@@ -1141,19 +1138,24 @@ function savePropose(){
   showToast('✅ Đã gửi đề xuất thành công!');
 }
 
-// Like / tiếp nhận
+// [5] toggleLike: lưu tên ban tiếp nhận
 function toggleLike(id){
   const p = proposeDB.find(x=>x.id===id);
   if(!p) return;
   p.likedByMe = !p.likedByMe;
-  p.likes += p.likedByMe ? 1 : -1;
-  if(p.likedByMe) p.trangThai = 'Đã tiếp nhận';
-  else p.trangThai = p.likes > 0 ? 'Đã tiếp nhận' : 'Chờ tiếp nhận';
+  if(p.likedByMe){
+    // Thêm ban của user hiện tại vào danh sách likers
+    if(!p.likers.find(l=>l.ban===CURRENT_USER.ban)){
+      p.likers.push({ ban: CURRENT_USER.ban, nguoi: CURRENT_USER.ten });
+    }
+  } else {
+    p.likers = p.likers.filter(l=>l.ban!==CURRENT_USER.ban);
+  }
+  p.trangThai = p.likers.length > 0 ? 'Đã tiếp nhận' : 'Chờ tiếp nhận';
   renderDxTable();
   showToast(p.likedByMe ? '👍 Đã tiếp nhận đề xuất!' : '↩️ Đã hủy tiếp nhận');
 }
 
-// Render bảng đề xuất
 function renderDxTable(){
   const filterBan = document.getElementById('dx-filter-ban').value;
   const filterUu = document.getElementById('dx-filter-uu').value;
@@ -1183,17 +1185,40 @@ function renderDxTable(){
       const likeIcon = p.likedByMe
         ? `<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>`
         : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>`;
+
+      // [5] Hiển thị tên ban đã tiếp nhận trong cột nếu có
+      let likeCell = '';
+      if(p.likers.length > 0){
+        likeCell = `<div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <button class="${likeCls}" onclick="toggleLike(${p.id})">${likeIcon} ${p.likers.length}</button>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;justify-content:center;">
+            ${p.likers.map(l=>`<span style="font-size:11px;font-weight:700;background:#e8f5ee;color:#1a6b3a;border:1px solid #a0d8b0;border-radius:10px;padding:1px 6px;">✓ ${l.ban}</span>`).join('')}
+          </div>
+        </div>`;
+      } else {
+        likeCell = `<button class="${likeCls}" onclick="toggleLike(${p.id})">${likeIcon} Tiếp nhận</button>`;
+      }
+
+      // [3] Ngày đậm hơn
+      const dateDisplay = p.thoihan
+        ? `<span style="font-weight:800;color:var(--text-main);">${fmtDate(p.thoihan)}</span>`
+        : `<span style="color:var(--text-muted);">—</span>`;
+
+      // [2] Cột ghi chú
+      const ghichuDisplay = p.ghichu
+        ? `<span class="dx-col-ghichu-text">${p.ghichu}</span>`
+        : `<span style="color:#c0b898;font-size:13px;font-style:italic;">—</span>`;
+
       return `<tr>
         <td class="dx-col-stt"><span class="stt-num">${i+1}</span></td>
         <td class="dx-col-tieu" style="font-weight:700;">${p.tieude}</td>
         <td class="dx-col-ban-de"><span class="ban-tag">${p.banA}</span></td>
         <td class="dx-col-ban-nhan"><span class="ban-tag" style="background:#e8f0fe;color:#1a3a8b;border-color:#a0b8f0;">${p.banB}</span></td>
         <td class="dx-col-uu">${uuBadge}</td>
-        <td class="dx-col-tgian" style="font-size:14px;">${p.thoihan?fmtDate(p.thoihan):'—'}</td>
+        <td class="dx-col-tgian">${dateDisplay}</td>
         <td class="dx-col-tt">${ttBadge2}</td>
-        <td class="dx-col-like" style="text-align:center;">
-          <button class="${likeCls}" onclick="toggleLike(${p.id})">${likeIcon}${p.likes>0?` ${p.likes}`:' Tiếp nhận'}</button>
-        </td>
+        <td class="dx-col-like" style="text-align:center;">${likeCell}</td>
+        <td class="dx-col-ghichu">${ghichuDisplay}</td>
         <td class="dx-col-xem" style="text-align:center;">
           <button class="act-btn view" title="Xem chi tiết" onclick="openDxViewModal(${p.id})">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -1211,7 +1236,7 @@ function resetDxFilter(){
   renderDxTable();
 }
 
-// View chi tiết đề xuất
+// [1][5] Modal chi tiết: hiển thị danh sách ban đã tiếp nhận rõ ràng
 function openDxViewModal(id){
   const p = proposeDB.find(x=>x.id===id);
   if(!p) return;
@@ -1221,6 +1246,20 @@ function openDxViewModal(id){
   const ttBadge2 = p.trangThai==='Đã tiếp nhận'
     ? `<span class="badge badge-da-tiep"><span class="dot dot-green"></span>Đã tiếp nhận</span>`
     : `<span class="badge badge-cho-tiep"><span class="dot dot-amber"></span>Chờ tiếp nhận</span>`;
+
+  // [5] Danh sách ban tiếp nhận hiển thị rõ tên ban
+  let likersHtml = '';
+  if(p.likers.length > 0){
+    likersHtml = `<div class="tiep-nhan-list">
+      ${p.likers.map(l=>`<span class="tiep-nhan-item">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>
+        ${l.ban} <span style="font-weight:500;opacity:0.75;">(${l.nguoi})</span>
+      </span>`).join('')}
+    </div>`;
+  } else {
+    likersHtml = `<span style="color:var(--text-muted);font-style:italic;">Chưa có ban tiếp nhận</span>`;
+  }
+
   document.getElementById('dxViewModalBody').innerHTML = `
     <div style="margin-bottom:16px;">
       <div style="font-size:18px;font-weight:800;color:var(--text-main);margin-bottom:10px;">${p.tieude}</div>
@@ -1229,14 +1268,18 @@ function openDxViewModal(id){
     <div class="add-label" style="margin-bottom:6px;">Nội dung đề xuất</div>
     <div class="dxcv-noidung-box">${p.noidung||'<i style="color:var(--text-muted);">Không có nội dung</i>'}</div>
     <div class="dxcv-meta-grid">
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ban đề xuất (Ban A)</div><div class="dxcv-meta-value"><span class="ban-tag">${p.banA}</span></div></div>
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ban tiếp nhận (Ban B)</div><div class="dxcv-meta-value"><span class="ban-tag" style="background:#e8f0fe;color:#1a3a8b;border-color:#a0b8f0;">${p.banB}</span></div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ban đề xuất</div><div class="dxcv-meta-value"><span class="ban-tag">${p.banA}</span></div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ban được đề xuất</div><div class="dxcv-meta-value"><span class="ban-tag" style="background:#e8f0fe;color:#1a3a8b;border-color:#a0b8f0;">${p.banB}</span></div></div>
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Người tạo</div><div class="dxcv-meta-value">${p.nguoiTao} · ${p.chucDanhTao}</div></div>
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ngày tạo</div><div class="dxcv-meta-value">${fmtDate(p.ngayTao)}</div></div>
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Thời hạn</div><div class="dxcv-meta-value">${p.thoihan?fmtDate(p.thoihan):'—'}</div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ngày tạo</div><div class="dxcv-meta-value" style="font-weight:800;">${fmtDate(p.ngayTao)}</div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Thời hạn</div><div class="dxcv-meta-value" style="font-weight:800;color:var(--text-main);">${p.thoihan?fmtDate(p.thoihan):'—'}</div></div>
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Địa điểm tiếp nhận</div><div class="dxcv-meta-value">${p.diadiem||'—'}</div></div>
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Người liên hệ</div><div class="dxcv-meta-value">${p.lienhe||'—'}</div></div>
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Lượt tiếp nhận</div><div class="dxcv-meta-value">👍 ${p.likes} lượt</div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ghi chú</div><div class="dxcv-meta-value" style="font-style:${p.ghichu?'normal':'italic'};color:${p.ghichu?'var(--text-main)':'var(--text-muted)'};">${p.ghichu||'Không có'}</div></div>
+    </div>
+    <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
+      <div class="dxcv-meta-label" style="margin-bottom:8px;">BAN ĐÃ TIẾP NHẬN (${p.likers.length} lượt)</div>
+      ${likersHtml}
     </div>
   `;
   document.getElementById('dxViewModal').classList.add('show');
@@ -1247,9 +1290,7 @@ function closeDxViewModal(){
   document.body.style.overflow='';
 }
 
-/* ============================================================
-   INIT
-   ============================================================ */
+/* INIT */
 initBanDropdowns();
 buildMsList();
 doSearch();
