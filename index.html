@@ -72,9 +72,8 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .page-title-icon svg { width: 19px; height: 19px; color: var(--burgundy); }
 
 /* FORMS */
-/* FIX 2: Nhỏ lại filter controls */
 .form-label { font-size: 15px; font-weight: 700; color: var(--burgundy); }
-.form-select, .form-input { height: 36px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 36px 0 12px; font-size: px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; }
+.form-select, .form-input { height: 36px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 36px 0 12px; font-size: 14px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; }
 .form-select { appearance: none; -webkit-appearance: none; background-image: var(--caret-svg); background-repeat: no-repeat; background-position: right 12px center; background-size: 14px 14px; cursor: pointer; }
 .form-input { padding-right: 12px; }
 .form-select:focus, .form-input:focus { border-color: var(--input-focus); }
@@ -83,9 +82,6 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .btn-propose { display: flex; align-items: center; gap: 7px; padding: 9px 18px; background: var(--burgundy); color: #fff; border: none; border-radius: 9px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
 .btn-propose:hover { background: #4e1212; }
 .btn-propose svg { width: 16px; height: 16px; }
-/* FIX 2: btn-reset nhỏ lại, cùng hàng */
-.btn-reset { height: 35px; padding: 0 12px; background: var(--burgundy); color: #fff; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
-.btn-reset:hover { background: #4e1212; }
 .btn-cancel { padding: 9px 20px; background: #f0ece4; color: var(--text-muted); border: 1.5px solid var(--border); border-radius: 9px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: all 0.15s; }
 .btn-cancel:hover { background: var(--border); }
 .btn-save { padding: 9px 24px; background: #7a3a00; color: #fff; border: none; border-radius: 9px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: background 0.15s; display: flex; align-items: center; gap: 7px; }
@@ -98,78 +94,80 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .dxcv-card-header-title { font-size: 15px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.7px; white-space: nowrap; }
 .dxcv-card-header-count { color: var(--burgundy); font-size: 15px; font-weight: 800; white-space: nowrap; }
 .dxcv-header-sep { width: 1.5px; height: 22px; background: #d4c8b0; flex-shrink: 0; margin: 0 2px; }
-/* FIX 2: filter section cùng hàng, nhỏ gọn */
-.dxcv-filter-section { 
-    padding: 7px 18px 8px; 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-    flex-wrap: nowrap; 
-    border-bottom: 3px solid #d4c8b0; 
-    overflow-x: auto; 
+
+/* FILTER SECTION */
+.dxcv-filter-section {
+  padding: 7px 18px 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  border-bottom: 3px solid #d4c8b0;
+  overflow-x: auto;
 }
 
-.filter-group { 
-    display: flex; 
-    align-items: center; 
-    gap: 6px; 
-    flex-shrink: 0; 
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
-/* Kéo dài ô chọn "Tất cả các ban" */
-.filter-group:first-of-type .form-select { 
-    width: 210px; 
+.filter-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.filter-search-wrap { 
-    position: relative; 
-    display: flex; 
-    align-items: center; 
+.filter-search-wrap svg {
+  position: absolute;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  color: #b09070;
+  pointer-events: none;
 }
 
-.filter-search-wrap svg { 
-    position: absolute; 
-    left: 10px; 
-    width: 14px; 
-    height: 14px; 
-    color: #b09070; 
-    pointer-events: none; 
+.filter-search-input {
+  height: 32px;
+  border: 1.5px solid var(--input-border);
+  border-radius: 8px;
+  padding: 0 12px 0 30px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-main);
+  background: #fff;
+  outline: none;
+  width: 150px;
+  transition: border-color 0.15s;
 }
 
-.filter-search-input { 
-    height: 32px; 
-    border: 1.5px solid var(--input-border); 
-    border-radius: 8px; 
-    padding: 0 12px 0 30px; 
-    font-size: 14px; 
-    font-family: inherit; 
-    color: var(--text-main); 
-    background: #fff; 
-    outline: none; 
-    width: 180px; 
-    transition: border-color 0.15s; 
+.filter-search-input:focus { border-color: var(--input-focus); }
+
+/* Vạch | trước nút Đặt lại */
+.filter-reset-sep {
+  width: 1.5px;
+  height: 24px;
+  background: #d4c8b0;
+  flex-shrink: 0;
 }
 
-/* Nút Đặt lại có vạch ngăn dọc | */
-.btn-reset { 
-    margin-left: 8px; /* Khoảng cách sau vạch kẻ */
-    padding-left: 15px; /* Đẩy chữ ra xa vạch kẻ */
-    border-left: 1.5px solid #d4c8b0; /* Đây chính là vạch ngăn dọc | */
-    border-radius: 0 8px 8px 0; /* Giữ bo góc bên phải, để phẳng bên trái chỗ vạch kẻ */
-    flex-shrink: 0;
-    height: 32px;
-    background: var(--burgundy);
-    color: #fff;
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-    font-weight: 600;
-    cursor: pointer;
+.btn-reset {
+  height: 32px;
+  padding: 0 14px;
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
 }
-
-.btn-reset:hover {
-    background: #4e1212;
-}
+.btn-reset:hover { background: #4e1212; }
 
 /* TABLE CARD */
 .dxcv-table-card { background: var(--card-bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 14px 14px; box-shadow: 0 1px 4px rgba(90,45,0,0.06); overflow: hidden; }
@@ -625,25 +623,31 @@ tr:hover td { background: var(--row-hover) !important; }
       <span class="dxcv-card-header-title">Danh Sách Đề Xuất</span>
       <span class="dxcv-card-header-count">(<span id="dx-count">0</span>)</span>
     </div>
-    <!-- FIX 2: tất cả filter + nút Đặt lại cùng một hàng, nhỏ gọn hơn -->
+
+    <!-- FILTER ROW: tất cả cùng 1 dòng, không wrap -->
     <div class="dxcv-filter-section">
+      <!-- Lọc theo ban -->
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Lọc theo ban:</label>
-        <select class="form-select" id="dx-filter-ban" style="width:155px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-ban" style="width:185px;" onchange="renderDxTable()">
           <option value="">— Tất cả các ban —</option>
         </select>
       </div>
+
+      <!-- Ưu tiên -->
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Ưu tiên:</label>
-        <select class="form-select" id="dx-filter-uu" style="width:115px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-uu" style="width:118px;" onchange="renderDxTable()">
           <option value="">— Tất cả —</option>
           <option value="Khẩn cấp">Khẩn cấp</option>
           <option value="Bình thường">Bình thường</option>
         </select>
       </div>
+
+      <!-- Trạng thái -->
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Trạng thái:</label>
-        <select class="form-select" id="dx-filter-tt" style="width:145px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-tt" style="width:138px;" onchange="renderDxTable()">
           <option value="">— Tất cả —</option>
           <option value="Chờ tiếp nhận">Chờ tiếp nhận</option>
           <option value="Đã tiếp nhận">Đã tiếp nhận</option>
@@ -651,6 +655,8 @@ tr:hover td { background: var(--row-hover) !important; }
           <option value="Đã xong">Đã xong</option>
         </select>
       </div>
+
+      <!-- Tìm kiếm -->
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Tìm kiếm:</label>
         <div class="filter-search-wrap">
@@ -658,6 +664,11 @@ tr:hover td { background: var(--row-hover) !important; }
           <input class="filter-search-input" id="dx-filter-search" type="text" placeholder="Tìm tiêu đề..." oninput="renderDxTable()" />
         </div>
       </div>
+
+      <!-- Vạch | -->
+      <div class="filter-reset-sep"></div>
+
+      <!-- Nút Đặt lại -->
       <button class="btn-reset" onclick="resetDxFilter()">Đặt lại</button>
     </div>
   </div>
