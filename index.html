@@ -73,8 +73,8 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 
 /* FORMS */
 /* FIX 2: Nhỏ lại filter controls */
-.form-label { font-size: 14px; font-weight: 700; color: var(--burgundy); }
-.form-select, .form-input { height: 32px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 36px 0 12px; font-size: 14px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; }
+.form-label { font-size: 15px; font-weight: 700; color: var(--burgundy); }
+.form-select, .form-input { height: 36px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 36px 0 12px; font-size: px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; }
 .form-select { appearance: none; -webkit-appearance: none; background-image: var(--caret-svg); background-repeat: no-repeat; background-position: right 12px center; background-size: 14px 14px; cursor: pointer; }
 .form-input { padding-right: 12px; }
 .form-select:focus, .form-input:focus { border-color: var(--input-focus); }
@@ -99,13 +99,77 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .dxcv-card-header-count { color: var(--burgundy); font-size: 15px; font-weight: 800; white-space: nowrap; }
 .dxcv-header-sep { width: 1.5px; height: 22px; background: #d4c8b0; flex-shrink: 0; margin: 0 2px; }
 /* FIX 2: filter section cùng hàng, nhỏ gọn */
-.dxcv-filter-section { padding: 7px 18px 8px; display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; border-bottom: 3px solid #d4c8b0; overflow-x: auto; }
-.filter-group { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-.filter-search-wrap { position: relative; display: flex; align-items: center; }
-.filter-search-wrap svg { position: absolute; left: 10px; width: 14px; height: 14px; color: #b09070; pointer-events: none; }
-.filter-search-input { height: 32px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 12px 0 30px; font-size: 14px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; width: 150px; transition: border-color 0.15s; }
-.filter-search-input:focus { border-color: var(--input-focus); }
-.filter-search-input::placeholder { color: #c0a878; }
+.dxcv-filter-section { 
+    padding: 7px 18px 8px; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    flex-wrap: nowrap; 
+    border-bottom: 3px solid #d4c8b0; 
+    overflow-x: auto; 
+}
+
+.filter-group { 
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+    flex-shrink: 0; 
+}
+
+/* Kéo dài ô chọn "Tất cả các ban" */
+.filter-group:first-of-type .form-select { 
+    width: 210px; 
+}
+
+.filter-search-wrap { 
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+}
+
+.filter-search-wrap svg { 
+    position: absolute; 
+    left: 10px; 
+    width: 14px; 
+    height: 14px; 
+    color: #b09070; 
+    pointer-events: none; 
+}
+
+.filter-search-input { 
+    height: 32px; 
+    border: 1.5px solid var(--input-border); 
+    border-radius: 8px; 
+    padding: 0 12px 0 30px; 
+    font-size: 14px; 
+    font-family: inherit; 
+    color: var(--text-main); 
+    background: #fff; 
+    outline: none; 
+    width: 180px; 
+    transition: border-color 0.15s; 
+}
+
+/* Nút Đặt lại có vạch ngăn dọc | */
+.btn-reset { 
+    margin-left: 8px; /* Khoảng cách sau vạch kẻ */
+    padding-left: 15px; /* Đẩy chữ ra xa vạch kẻ */
+    border-left: 1.5px solid #d4c8b0; /* Đây chính là vạch ngăn dọc | */
+    border-radius: 0 8px 8px 0; /* Giữ bo góc bên phải, để phẳng bên trái chỗ vạch kẻ */
+    flex-shrink: 0;
+    height: 32px;
+    background: var(--burgundy);
+    color: #fff;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-reset:hover {
+    background: #4e1212;
+}
 
 /* TABLE CARD */
 .dxcv-table-card { background: var(--card-bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 14px 14px; box-shadow: 0 1px 4px rgba(90,45,0,0.06); overflow: hidden; }
