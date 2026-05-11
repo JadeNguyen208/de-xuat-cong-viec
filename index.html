@@ -67,7 +67,7 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 /* PAGE LAYOUT */
 .page-wrapper { width: 100%; padding: 0 16px 24px; }
 .page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; padding-top: 14px; }
-.page-title { font-size: px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
+.page-title { font-size: 18px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
 .page-title-icon { width: 36px; height: 36px; background: #ffffff; border: 2px solid var(--tb-border); border-radius: 9px; display: flex; align-items: center; justify-content: center; }
 .page-title-icon svg { width: 19px; height: 19px; color: var(--burgundy); }
 
@@ -119,68 +119,61 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 table { width: 100%; border-collapse: collapse; font-size: 16px; }
 thead { background: #fff; }
 th { padding: 14px 14px; text-align: center; font-size: 16px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 2px solid #d4c8b0; vertical-align: middle; white-space: nowrap; }
-td { padding: 20px 14px; border-bottom: 1px solid #f0ece4; color: var(--text-main); vertical-align: middle; font-size: 16px; }
+td { padding: 16px 14px; border-bottom: 1px solid #f0ece4; color: var(--text-main); vertical-align: middle; font-size: 16px; }
 tr:last-child td { border-bottom: none; }
 tr:nth-child(even) td { background: var(--row-stripe); }
 tr:hover td { background: var(--row-hover) !important; }
 
 /* COLUMN WIDTHS & ALIGNMENT */
 .dx-col-stt { width: 44px; text-align: center; }
-
-/* ✅ FIX: Tiêu đề — căn giữa (th đã căn giữa theo global, td cũng căn giữa) */
-.dx-col-tieu { min-width: 160px; max-width: 200px; text-align: center; }
-
-/* ✅ FIX: Nội dung — th căn giữa (global), td căn trái */
-.dx-col-noidung { min-width: 320px; max-width: 380px; }
-td.dx-col-noidung { text-align: left; padding-left: 16px; padding-right: 14px; }
-
-/* Ban đề xuất → Nhận — căn giữa */
-.dx-col-ban { width: 150px; text-align: center; }
-.ban-arrow-cell { display: flex; flex-direction: column; gap: 3px; align-items: center; }
-.ban-arrow { font-size: 13px; color: #b09070; font-weight: 600; padding: 0 2px; }
-
-/* Ưu tiên — căn giữa */
+.dx-col-ban { width: 160px; text-align: center; }
+.dx-col-tieu { min-width: 180px; max-width: 220px; text-align: center; }
 .dx-col-uu { width: 110px; text-align: center; }
-
-/* Thời hạn — căn giữa */
 .dx-col-tgian { width: 120px; text-align: center; }
-
-/* Trạng thái — căn giữa */
-.dx-col-tt { width: 140px; text-align: center; }
-
-/* Tiếp nhận — căn giữa */
+.dx-col-tt { width: 150px; text-align: center; }
 .dx-col-like { width: 110px; text-align: center; }
-
-/* Ghi chú — căn trái */
-.dx-col-ghichu { min-width: 110px; max-width: 150px; text-align: left; }
-
-/* Thao tác — căn giữa */
+.dx-col-ykien { min-width: 140px; max-width: 180px; text-align: center; }
 .dx-col-thaotac { width: 90px; text-align: center; }
 
-/* BAN TAG */
-.ban-tag-wrap { display: inline-block; font-size: 18px; font-weight: 700; background: none; color: #1a5a3a; border: none; border-radius: 0; padding: 0; word-break: keep-all; white-space: normal; line-height: 1.5; max-width: 140px; text-align: center; }
+/* BAN TAG — 3 từ mỗi dòng */
+.ban-tag-wrap {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a5a3a;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 140px;
+  word-break: break-word;
+}
 .ban-tag-wrap.blue { color: #1a3a8b; }
 
-/* ✅ FIX: NOIDUNG TEXT — căn trái (th header vẫn căn giữa theo global) */
-.dx-col-noidung-text { font-size: 16px; color: #1a0f00; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-align: left; }
-.dx-col-ghichu-text { font-size: 16px; color: var(--text-muted); font-style: italic; line-height: 1.4; }
+/* Helper: break ban name every 3 words */
+.ban-3word { display: block; }
+
+.ban-arrow-cell { display: flex; flex-direction: column; gap: 2px; align-items: center; }
+.ban-arrow { font-size: 13px; color: #b09070; font-weight: 600; }
 
 .stt-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; background: #f0ece4; font-size: 16px; font-weight: 700; color: var(--text-muted); }
 
 /* BADGES */
-.badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 20px; font-size: 16px; font-weight: 700; white-space: nowrap; }
+.badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 20px; font-size: 14px; font-weight: 700; white-space: nowrap; }
 .badge-khan { background: #fff0f0; color: #c0392b; border: 1px solid #f0b8b8; }
 .badge-binh { background: #e8f5ee; color: #1a6b3a; border: 1px solid #a0d8b0; }
 .badge-cho-tiep { background: #fff8e6; color: #8b5a00; border: 1px solid #f0c840; }
 .badge-da-tiep { background: #e8f5ee; color: #1a6b3a; border: 1px solid #a0d8b0; }
+.badge-dang-tk { background: #e8f0fe; color: #1a3a8b; border: 1px solid #a0b8f0; }
+.badge-da-xong { background: #f0f8f0; color: #1a4a2e; border: 1px solid #80c880; }
 .badge-da-sua { display: inline-flex; align-items: center; gap: 3px; padding: 2px 7px; border-radius: 10px; font-size: 13px; font-weight: 700; background: #f0e8fe; color: #6b1a8b; border: 1px solid #d0a0f0; white-space: nowrap; }
 .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 3px; }
 .dot-green { background: var(--green-text); }
 .dot-amber { background: var(--amber-text); }
+.dot-blue { background: #1a3a8b; }
+.dot-darkgreen { background: #1a4a2e; }
 
 /* LIKE BUTTON */
 .like-cell-wrap { display: flex; justify-content: center; }
-.like-btn { display: inline-flex; align-items: center; gap: 5px; padding: 5px 11px; border-radius: 20px; border: 1.5px solid #d4c8b0; background: #fff; cursor: pointer; font-size: 15px; font-weight: 700; color: var(--text-muted); font-family: inherit; transition: all 0.18s; white-space: nowrap; position: relative; }
+.like-btn { display: inline-flex; align-items: center; gap: 5px; padding: 5px 11px; border-radius: 20px; border: 1.5px solid #d4c8b0; background: #fff; cursor: pointer; font-size: 14px; font-weight: 700; color: var(--text-muted); font-family: inherit; transition: all 0.18s; white-space: nowrap; position: relative; }
 .like-btn:hover { border-color: #4a90d9; color: #1a5fa8; background: #e8f0fe; }
 .like-btn.liked { border-color: #4a90d9; color: #fff; background: #3b82f6; }
 .like-btn.liked:hover { background: #2563eb; }
@@ -197,6 +190,25 @@ td.dx-col-noidung { text-align: left; padding-left: 16px; padding-right: 14px; }
 .like-popover-sep { display: inline-block; width: 1px; height: 12px; background: #d4c8b0; margin: 0 4px; }
 .like-popover-empty { padding: 6px 12px; font-size: 13px; color: var(--text-muted); font-style: italic; }
 .like-popover::after { content: ''; position: absolute; bottom: -6px; left: 50%; width: 10px; height: 10px; background: #fff; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transform: translateX(-50%) rotate(45deg); }
+
+/* Ý KIẾN CELL */
+.ykien-cell { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+.ykien-text { font-size: 14px; color: var(--text-main); line-height: 1.5; font-style: italic; }
+.ykien-empty { font-size: 13px; color: #c0b898; font-style: italic; }
+.ykien-edit-btn { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: #7a3a00; background: #fff8e6; border: 1px solid #e0c870; border-radius: 6px; padding: 2px 8px; cursor: pointer; font-family: inherit; transition: all 0.12s; white-space: nowrap; }
+.ykien-edit-btn:hover { background: #fef0c0; border-color: #c8a030; }
+.ykien-edit-btn svg { width: 11px; height: 11px; }
+
+/* YKIEN INPUT ROW */
+.ykien-input-wrap { display: flex; gap: 4px; align-items: center; width: 100%; }
+.ykien-input { flex: 1; height: 30px; border: 1.5px solid var(--input-border); border-radius: 6px; padding: 0 8px; font-size: 13px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; min-width: 0; }
+.ykien-input:focus { border-color: var(--input-focus); }
+.ykien-save-btn { width: 28px; height: 28px; background: #2d6a4f; border: none; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ykien-save-btn:hover { background: #1a4a2e; }
+.ykien-save-btn svg { width: 13px; height: 13px; color: #fff; }
+.ykien-cancel-btn { width: 28px; height: 28px; background: #f0ece4; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ykien-cancel-btn:hover { background: #e0d8c8; }
+.ykien-cancel-btn svg { width: 13px; height: 13px; color: var(--text-muted); }
 
 /* PAGINATION */
 .dx-pagination { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-top: 1px solid #f0ece4; background: #faf7f2; gap: 12px; }
@@ -320,6 +332,20 @@ td.dx-col-noidung { text-align: left; padding-left: 16px; padding-right: 14px; }
 .dxcv-meta-item:last-child, .dxcv-meta-item.dxcv-meta-item--full { grid-column: 1 / -1; background: #fdf2d8; }
 .dxcv-meta-label { font-size: 11px; font-weight: 800; color: #8b4a00; text-transform: uppercase; letter-spacing: 0.5px; }
 .dxcv-meta-value { font-size: 16px; font-weight: 600; color: var(--text-main); }
+
+/* Ban name 3-word wrap in modal */
+.ban-name-modal {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+  word-break: break-word;
+  max-width: 180px;
+}
+.ban-name-modal.green { color: #1a5a3a; }
+.ban-name-modal.blue { color: #1a3a8b; }
+
 .dxcv-tiep-nhan-section { margin-top: 14px; padding: 12px 14px; background: #f0f8f2; border: 1.5px solid #b8dfc4; border-radius: 10px; }
 .dxcv-tiep-nhan-label { font-size: 11px; font-weight: 800; color: #1a6b3a; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
 .tiep-nhan-list { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -408,7 +434,7 @@ td.dx-col-noidung { text-align: left; padding-left: 16px; padding-right: 14px; }
           Quản Lý Công Việc
         </div>
         <div class="ud-item active">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18.5" x2="14.5" y2="18.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
           Đề Xuất Công Việc
         </div>
         <div class="ud-sep"></div>
@@ -482,17 +508,19 @@ td.dx-col-noidung { text-align: left; padding-left: 16px; padding-right: 14px; }
       </div>
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Trạng thái:</label>
-        <select class="form-select" id="dx-filter-tt" style="width:155px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-tt" style="width:170px;" onchange="renderDxTable()">
           <option value="">— Tất cả —</option>
           <option value="Chờ tiếp nhận">Chờ tiếp nhận</option>
           <option value="Đã tiếp nhận">Đã tiếp nhận</option>
+          <option value="Đang triển khai">Đang triển khai</option>
+          <option value="Đã xong">Đã xong</option>
         </select>
       </div>
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Tìm kiếm:</label>
         <div class="filter-search-wrap">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input class="filter-search-input" id="dx-filter-search" type="text" placeholder="Tìm nội dung..." oninput="renderDxTable()" />
+          <input class="filter-search-input" id="dx-filter-search" type="text" placeholder="Tìm tiêu đề..." oninput="renderDxTable()" />
         </div>
       </div>
       <button class="btn-reset" onclick="resetDxFilter()">Đặt lại</button>
@@ -506,14 +534,13 @@ td.dx-col-noidung { text-align: left; padding-left: 16px; padding-right: 14px; }
         <thead>
           <tr>
             <th class="dx-col-stt">STT</th>
-            <th class="dx-col-tieu">Tiêu đề</th>
-            <th class="dx-col-noidung">Nội dung</th>
             <th class="dx-col-ban">Ban đề xuất → Nhận</th>
+            <th class="dx-col-tieu">Tiêu đề</th>
             <th class="dx-col-uu">Ưu tiên</th>
             <th class="dx-col-tgian">Thời hạn</th>
             <th class="dx-col-tt">Trạng thái</th>
             <th class="dx-col-like">Tiếp nhận</th>
-            <th class="dx-col-ghichu" style="text-align:left;">Ghi chú</th>
+            <th class="dx-col-ykien" style="text-align:left;">Ý kiến ban nhận</th>
             <th class="dx-col-thaotac">Thao tác</th>
           </tr>
         </thead>
@@ -669,6 +696,7 @@ function lunMonth11(y,tz){const off=lunJd(31,12,y)-2415021,k=Math.floor(off/29.5
 function lunLeapOff(a11,tz){const k=Math.floor((a11-2415021.076998695)/29.530588853+0.5);let i=1,arc=lunSunLong(lunNewMoon(k+i,tz),tz),last=0;do{last=arc;i++;arc=lunSunLong(lunNewMoon(k+i,tz),tz);}while(arc!==last&&i<14);return i-1;}
 function solar2Lunar(d,m,y){const tz=7,jd=lunJd(d,m,y),k=Math.floor((jd-2415021.076998695)/29.530588853);let ms=lunNewMoon(k+1,tz);if(ms>jd)ms=lunNewMoon(k,tz);let a11=lunMonth11(y,tz),b11=a11,ly;if(a11>=ms){ly=y;a11=lunMonth11(y-1,tz);}else{ly=y+1;b11=lunMonth11(y+1,tz);}const lday=jd-ms+1,diff=Math.floor((ms-a11)/29);let leap=0,lm=diff+11;if(b11-a11>365){const lo=lunLeapOff(a11,tz);if(diff>=lo){lm=diff+10;if(diff===lo)leap=1;}}if(lm>12)lm-=12;if(lm>=11&&diff<4)ly--;return{day:lday,month:lm,year:ly,isLeap:leap===1,can:LUN_CAN[(ly+6)%10],chi:LUN_CHI[(ly+8)%12]};}
 
+/* Hiển thị ngày âm lịch — mặc định */
 function fmtLunar(dateStr){
   if(!dateStr)return'—';
   const p=dateStr.split('-');
@@ -676,6 +704,9 @@ function fmtLunar(dateStr){
   const lun=solar2Lunar(parseInt(p[2]),parseInt(p[1]),parseInt(p[0]));
   return`${lun.day}/${lun.month}${lun.isLeap?' (n)':''} ÂL`;
 }
+/* Hiển thị ngày dương lịch */
+function fmtDate(d){if(!d)return'—';const p=d.split('-');return`${p[2]}/${p[1]}/${p[0]}`;}
+function fmtDateTime(s){if(!s)return'';const d=new Date(s);const dd=String(d.getDate()).padStart(2,'0'),mm=String(d.getMonth()+1).padStart(2,'0'),yy=d.getFullYear(),hh=String(d.getHours()).padStart(2,'0'),mn=String(d.getMinutes()).padStart(2,'0');return`${dd}/${mm}/${yy} ${hh}:${mn}`;}
 
 (function(){const n=new Date();const lun=solar2Lunar(n.getDate(),n.getMonth()+1,n.getFullYear());const THU=['Chủ Nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];const dd=String(n.getDate()).padStart(2,'0'),mm=String(n.getMonth()+1).padStart(2,'0');document.getElementById('dtDuong').textContent=`${THU[n.getDay()]}, ${dd}/${mm}/${n.getFullYear()}`;document.getElementById('dtAm').textContent=`🌙 ${lun.day}/${lun.month} Âm Lịch`;})();
 
@@ -683,11 +714,20 @@ function fmtLunar(dateStr){
 const NDP_MONTHS=['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
 let ndpInstances={},ndpOpenId=null;
 function createNdp(containerId,initialVal,onChange){const today=new Date();let viewY=today.getFullYear(),viewM=today.getMonth(),selDate=null,panel='cal',yearRangeStart=Math.floor(viewY/20)*20;if(initialVal){const p=initialVal.split('-');if(p[0]&&p[1]&&p[2]){selDate=new Date(parseInt(p[0]),parseInt(p[1])-1,parseInt(p[2]));viewY=selDate.getFullYear();viewM=selDate.getMonth();}}const wrap=document.getElementById(containerId);if(!wrap)return null;ndpInstances[containerId]={viewY,viewM,selDate,panel,yearRangeStart,onChange};renderNdp(containerId);}
-function renderNdp(id){const inst=ndpInstances[id];if(!inst)return;const wrap=document.getElementById(id);if(!wrap)return;const{viewY,viewM,selDate,panel,yearRangeStart}=inst;const today=new Date();let dispText='',hasVal=false;if(selDate){dispText=`${String(selDate.getDate()).padStart(2,'0')}/${String(selDate.getMonth()+1).padStart(2,'0')}/${selDate.getFullYear()}`;hasVal=true;}let lunFooter='';if(selDate){const lun=solar2Lunar(selDate.getDate(),selDate.getMonth()+1,selDate.getFullYear());lunFooter=`<div class="ndp-footer"><div class="lun-row"><span class="lun-lbl">Dương lịch:</span><span class="lun-val">${String(selDate.getDate()).padStart(2,'0')}/${String(selDate.getMonth()+1).padStart(2,'0')}/${selDate.getFullYear()}</span></div><div class="lun-row"><span class="lun-lbl">Âm lịch:</span><span class="lun-val lunar">Ngày ${lun.day} tháng ${lun.month}${lun.isLeap?' (nhuận)':''} năm ${lun.can} ${lun.chi}</span></div></div>`;}
-let calHtml='';if(panel==='cal'){const first=new Date(viewY,viewM,1);let dow=first.getDay()-1;if(dow<0)dow=6;const prevLast=new Date(viewY,viewM,0).getDate(),dim=new Date(viewY,viewM+1,0).getDate();let days=[];for(let i=dow-1;i>=0;i--)days.push({d:new Date(viewY,viewM-1,prevLast-i),other:true});for(let d=1;d<=dim;d++)days.push({d:new Date(viewY,viewM,d),other:false});const need=Math.ceil(days.length/7)*7;for(let n=1;days.length<need;n++)days.push({d:new Date(viewY,viewM+1,n),other:true});calHtml=`<div class="ndp-cal"><div class="ndp-wds"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span class="wd-sun">CN</span></div><div class="ndp-days">`;days.forEach(item=>{const lun=solar2Lunar(item.d.getDate(),item.d.getMonth()+1,item.d.getFullYear());const isTd=item.d.getFullYear()===today.getFullYear()&&item.d.getMonth()===today.getMonth()&&item.d.getDate()===today.getDate();const isSel=selDate&&item.d.getFullYear()===selDate.getFullYear()&&item.d.getMonth()===selDate.getMonth()&&item.d.getDate()===selDate.getDate();const isSun=item.d.getDay()===0,isSat=item.d.getDay()===6;const cls=['ndp-day',item.other?'ndp-other':'',isTd?'ndp-today':'',isSel?'ndp-sel':'',isSun?'ndp-sun':'',isSat?'ndp-sat':''].filter(Boolean).join(' ');const click=item.other?'':`onclick="ndpSelectDay('${id}',${item.d.getFullYear()},${item.d.getMonth()},${item.d.getDate()})"`;calHtml+=`<div class="${cls}" ${click}><span class="d-sol">${item.d.getDate()}</span><span class="d-lun">${lun.day}/${lun.month}</span></div>`;});calHtml+=`</div></div>`;}
-let mpH='';if(panel==='months'){mpH=`<div class="ndp-panel ndp-panel-months show">`;NDP_MONTHS.forEach((mn,i)=>{mpH+=`<div class="ndp-panel-item ${i===viewM?'selected':''}" onclick="ndpSelectMonth('${id}',${i})">${mn}</div>`;});mpH+='</div>';}
-let ypH='';if(panel==='years'){ypH=`<div class="ndp-panel ndp-panel-years show">`;for(let y=yearRangeStart;y<yearRangeStart+20;y++){ypH+=`<div class="ndp-panel-item ${y===viewY?'selected':''}" onclick="ndpSelectYear('${id}',${y})">${y}</div>`;}ypH+='</div>';}
-wrap.innerHTML=`<div class="ndp-trigger${ndpOpenId===id?' open':''}" onclick="ndpToggle('${id}',event)"><span class="ndp-trigger-text${hasVal?'':' placeholder'}">${hasVal?dispText:'Chọn ngày...'}</span>${hasVal?`<button class="ndp-trigger-clear" onclick="ndpClear('${id}',event)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>`:''}<svg class="ndp-trigger-caret${ndpOpenId===id?' open':''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div><div class="ndp-popup${ndpOpenId===id?' open':''}" onclick="event.stopPropagation()"><div class="ndp-header"><button class="ndp-nav-btn" onclick="ndpNav('${id}',-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button><button class="ndp-month-btn" onclick="ndpTogglePanel('${id}','months',event)">${NDP_MONTHS[viewM]}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><button class="ndp-year-btn" onclick="ndpTogglePanel('${id}','years',event)">${viewY}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><button class="ndp-nav-btn" onclick="ndpNav('${id}',1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button></div>${mpH}${ypH}${calHtml}${lunFooter}</div>`;}
+function renderNdp(id){const inst=ndpInstances[id];if(!inst)return;const wrap=document.getElementById(id);if(!wrap)return;const{viewY,viewM,selDate,panel,yearRangeStart}=inst;const today=new Date();
+  /* Hiển thị âm lịch trong trigger */
+  let dispText='',hasVal=false;
+  if(selDate){
+    const lun=solar2Lunar(selDate.getDate(),selDate.getMonth()+1,selDate.getFullYear());
+    dispText=`${lun.day}/${lun.month}${lun.isLeap?' (n)':''} ÂL (${String(selDate.getDate()).padStart(2,'0')}/${String(selDate.getMonth()+1).padStart(2,'0')}/${selDate.getFullYear()})`;
+    hasVal=true;
+  }
+  let lunFooter='';
+  if(selDate){const lun=solar2Lunar(selDate.getDate(),selDate.getMonth()+1,selDate.getFullYear());lunFooter=`<div class="ndp-footer"><div class="lun-row"><span class="lun-lbl">Dương lịch:</span><span class="lun-val">${String(selDate.getDate()).padStart(2,'0')}/${String(selDate.getMonth()+1).padStart(2,'0')}/${selDate.getFullYear()}</span></div><div class="lun-row"><span class="lun-lbl">Âm lịch:</span><span class="lun-val lunar">Ngày ${lun.day} tháng ${lun.month}${lun.isLeap?' (nhuận)':''} năm ${lun.can} ${lun.chi}</span></div></div>`;}
+  let calHtml='';if(panel==='cal'){const first=new Date(viewY,viewM,1);let dow=first.getDay()-1;if(dow<0)dow=6;const prevLast=new Date(viewY,viewM,0).getDate(),dim=new Date(viewY,viewM+1,0).getDate();let days=[];for(let i=dow-1;i>=0;i--)days.push({d:new Date(viewY,viewM-1,prevLast-i),other:true});for(let d=1;d<=dim;d++)days.push({d:new Date(viewY,viewM,d),other:false});const need=Math.ceil(days.length/7)*7;for(let n=1;days.length<need;n++)days.push({d:new Date(viewY,viewM+1,n),other:true});calHtml=`<div class="ndp-cal"><div class="ndp-wds"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span class="wd-sun">CN</span></div><div class="ndp-days">`;days.forEach(item=>{const lun=solar2Lunar(item.d.getDate(),item.d.getMonth()+1,item.d.getFullYear());const isTd=item.d.getFullYear()===today.getFullYear()&&item.d.getMonth()===today.getMonth()&&item.d.getDate()===today.getDate();const isSel=selDate&&item.d.getFullYear()===selDate.getFullYear()&&item.d.getMonth()===selDate.getMonth()&&item.d.getDate()===selDate.getDate();const isSun=item.d.getDay()===0,isSat=item.d.getDay()===6;const cls=['ndp-day',item.other?'ndp-other':'',isTd?'ndp-today':'',isSel?'ndp-sel':'',isSun?'ndp-sun':'',isSat?'ndp-sat':''].filter(Boolean).join(' ');const click=item.other?'':`onclick="ndpSelectDay('${id}',${item.d.getFullYear()},${item.d.getMonth()},${item.d.getDate()})"`;calHtml+=`<div class="${cls}" ${click}><span class="d-sol">${item.d.getDate()}</span><span class="d-lun">${lun.day}/${lun.month}</span></div>`;});calHtml+=`</div></div>`;}
+  let mpH='';if(panel==='months'){mpH=`<div class="ndp-panel ndp-panel-months show">`;NDP_MONTHS.forEach((mn,i)=>{mpH+=`<div class="ndp-panel-item ${i===viewM?'selected':''}" onclick="ndpSelectMonth('${id}',${i})">${mn}</div>`;});mpH+='</div>';}
+  let ypH='';if(panel==='years'){ypH=`<div class="ndp-panel ndp-panel-years show">`;for(let y=yearRangeStart;y<yearRangeStart+20;y++){ypH+=`<div class="ndp-panel-item ${y===viewY?'selected':''}" onclick="ndpSelectYear('${id}',${y})">${y}</div>`;}ypH+='</div>';}
+  wrap.innerHTML=`<div class="ndp-trigger${ndpOpenId===id?' open':''}" onclick="ndpToggle('${id}',event)"><span class="ndp-trigger-text${hasVal?'':' placeholder'}">${hasVal?dispText:'Chọn ngày...'}</span>${hasVal?`<button class="ndp-trigger-clear" onclick="ndpClear('${id}',event)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>`:''}<svg class="ndp-trigger-caret${ndpOpenId===id?' open':''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div><div class="ndp-popup${ndpOpenId===id?' open':''}" onclick="event.stopPropagation()"><div class="ndp-header"><button class="ndp-nav-btn" onclick="ndpNav('${id}',-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button><button class="ndp-month-btn" onclick="ndpTogglePanel('${id}','months',event)">${NDP_MONTHS[viewM]}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><button class="ndp-year-btn" onclick="ndpTogglePanel('${id}','years',event)">${viewY}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><button class="ndp-nav-btn" onclick="ndpNav('${id}',1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button></div>${mpH}${ypH}${calHtml}${lunFooter}</div>`;}
 function ndpToggle(id,e){e.stopPropagation();ndpOpenId=ndpOpenId===id?null:id;if(ndpOpenId)ndpInstances[id].panel='cal';renderNdp(id);}
 function ndpClear(id,e){e.stopPropagation();ndpInstances[id].selDate=null;ndpOpenId=null;renderNdp(id);}
 function ndpNav(id,dir){const inst=ndpInstances[id];if(inst.panel==='years'){inst.yearRangeStart+=dir*20;}else{inst.viewM+=dir;if(inst.viewM>11){inst.viewM=0;inst.viewY++;}if(inst.viewM<0){inst.viewM=11;inst.viewY--;}}renderNdp(id);}
@@ -702,10 +742,81 @@ document.addEventListener('click',()=>{if(ndpOpenId){ndpOpenId=null;Object.keys(
 const ALL_BANS=['Ban An Ninh','Ban An Sinh','Ban Bảo Tàng','Ban Cơ Giới - Vận Tải','Ban Chăm Sóc Người Cao Tuổi','Ban Đời Sống','Ban Giáo Dục Thanh Thiếu Niên','Ban Hành Hương','Ban Hỗ Trợ Chùa Vệ Tinh','Ban Hướng Dẫn Phật Tử','Ban Hương Đăng','Ban May','Ban Môi Trường','Ban Nghi Lễ','Ban Nhân Sự - Tiền Lương','Ban Quản Chúng','Ban Quản Lý Dự Án','Ban Quốc Tế','Ban Tài Chính','Ban Trang Trí Khánh Tiết','Ban Tổ Chức Sự Kiện','Ban Thị Giả','Ban Thư Viện','Ban Tiếp Tăng Độ Chúng','Ban Tri Khố','Ban Tri Sự','Ban Vật Tư','Ban Văn Hóa Truyền Thông','Ban Văn Phòng','Ban Vườn','Ban Y Tế'];
 const CURRENT_USER={ten:'Phan Tuấn Anh',chucDanh:'Trưởng Ban',ban:'Ban Tri Sự'};
 
+/* Helper: format ban name 3 words per line */
+function banNameLines(name){
+  const words=name.split(' ');
+  const lines=[];
+  for(let i=0;i<words.length;i+=3){lines.push(words.slice(i,i+3).join(' '));}
+  return lines.join('<br>');
+}
+
 let proposeDB=[
-  {id:1,banA:'Ban Hương Đăng',nguoiTao:'Phan Tuấn Anh',chucDanhTao:'Trưởng Ban',banB:'Ban Tri Sự',tieude:'Hỗ trợ chuẩn bị đèn nến cho Đại Lễ Phật Đản',noidung:'<p>Kính đề xuất Ban Hương Đăng hỗ trợ chuẩn bị toàn bộ đèn nến, hương liệu phục vụ Đại Lễ Phật Đản 2026. Số lượng dự kiến khoảng 500 cây nến và 200 bó nhang.</p>',uutien:'Khẩn cấp',thoihan:'2026-05-15',diadiem:'Chánh điện tầng 1',lienhe:'Phan Tuấn Anh - 0901234567',ghichu:'Cần hoàn tất trước ngày 15/05',ngayTao:'2026-05-08',trangThai:'Đã tiếp nhận',likers:[{ban:'Ban Hương Đăng',nguoi:'Nguyễn Minh Phúc'}],likedByMe:false,daChinhSua:false,ngayChinhSua:null},
-  {id:2,banA:'Ban Văn Hóa Truyền Thông',nguoiTao:'Lê Thanh Hương',chucDanhTao:'Phó Ban',banB:'Ban Tri Sự',tieude:'Phối hợp ghi hình buổi lễ Vu Lan tháng 7',noidung:'<p>Đề xuất Ban Tổ Chức Sự Kiện phối hợp cung cấp lịch trình chi tiết và địa điểm cụ thể để Ban Văn Hóa Truyền Thông bố trí ekip quay phim chuyên nghiệp.</p>',uutien:'Bình thường',thoihan:'2026-06-20',diadiem:'Hội trường lớn',lienhe:'Lê Thanh Hương - 0912345678',ghichu:'',ngayTao:'2026-05-09',trangThai:'Chờ tiếp nhận',likers:[],likedByMe:false,daChinhSua:false,ngayChinhSua:null},
-  {id:3,banA:'Ban Y Tế',nguoiTao:'Trần Thị Mai',chucDanhTao:'Tổ Trưởng',banB:'Ban Tri Sự',tieude:'Hỗ trợ khám sức khoẻ miễn phí cho Phật tử cao tuổi',noidung:'<p>Ban Y Tế đề xuất phối hợp với Ban An Sinh tổ chức buổi khám sức khoẻ và phát thuốc miễn phí cho Phật tử cao tuổi, dự kiến 200-300 người tham gia.</p>',uutien:'Bình thường',thoihan:'2026-05-28',diadiem:'Phòng họp B2',lienhe:'Trần Thị Mai - 0923456789',ghichu:'Cần đăng ký trước 1 tuần',ngayTao:'2026-05-10',trangThai:'Chờ tiếp nhận',likers:[],likedByMe:false,daChinhSua:false,ngayChinhSua:null}
+  {
+    id:1,
+    banA:'Ban Hương Đăng',
+    nguoiTao:'Nguyễn Thị Lan',
+    chucDanhTao:'Trưởng Ban',
+    banB:'Ban Tri Sự',
+    tieude:'Nhờ xe tải chở 2 thùng kinh mới về thư viện',
+    noidung:'<p>Ban Hương Đăng kính nhờ Ban Tri Sự điều phối xe tải chở 2 thùng kinh sách mới (tổng khoảng 80kg) từ cổng chùa về đến Ban Thư Viện tầng 2. Dự kiến hàng về vào sáng ngày 15/05/2026, khoảng 8h–9h. Kính nhờ sắp xếp nhân lực bốc xếp và phương tiện phù hợp.</p>',
+    uutien:'Khẩn cấp',
+    thoihan:'2026-05-15',
+    diadiem:'Ban Thư Viện, tầng 2',
+    lienhe:'Nguyễn Thị Lan - 0901234567',
+    ghichu:'Cần hoàn tất trước buổi trưa ngày 15/05',
+    ngayTao:'2026-05-08',
+    trangThai:'Đã tiếp nhận',
+    likers:[{ban:'Ban Tri Sự',nguoi:'Phan Tuấn Anh'}],
+    likedByMe:true,
+    ykien:'Đã sắp xếp xe và 2 nhân lực, xuất phát lúc 7h30.',
+    editingYkien:false,
+    daChinhSua:false,
+    ngayChinhSua:null
+  },
+  {
+    id:2,
+    banA:'Ban Vườn',
+    nguoiTao:'Trần Văn Hùng',
+    chucDanhTao:'Tổ Trưởng',
+    banB:'Ban Tri Sự',
+    tieude:'Nhờ chở hoa lên sân chánh điện để trang trí',
+    noidung:'<p>Ban Vườn kính nhờ Ban Tri Sự hỗ trợ phương tiện vận chuyển hoa tươi (cúc vàng, sen trắng) từ khu vườn phía sau lên sân chánh điện tầng 1 để trang trí cho Đại Lễ Phật Đản. Ước tính 15–20 chậu lớn và khoảng 50 bó hoa cắt cành.</p>',
+    uutien:'Khẩn cấp',
+    thoihan:'2026-05-14',
+    diadiem:'Sân Chánh Điện tầng 1',
+    lienhe:'Trần Văn Hùng - 0912345678',
+    ghichu:'Cần hoàn tất trước 6h sáng ngày 14/05',
+    ngayTao:'2026-05-09',
+    trangThai:'Đang triển khai',
+    likers:[{ban:'Ban Tri Sự',nguoi:'Phan Tuấn Anh'}],
+    likedByMe:true,
+    ykien:'Đã điều xe và 3 người hỗ trợ, xuất phát 5h30 sáng.',
+    editingYkien:false,
+    daChinhSua:false,
+    ngayChinhSua:null
+  },
+  {
+    id:3,
+    banA:'Ban Y Tế',
+    nguoiTao:'Trần Thị Mai',
+    chucDanhTao:'Tổ Trưởng',
+    banB:'Ban An Sinh',
+    tieude:'Phối hợp tổ chức khám sức khoẻ miễn phí cho Phật tử cao tuổi',
+    noidung:'<p>Ban Y Tế kính nhờ Ban An Sinh hỗ trợ công tác đăng ký, sắp xếp chỗ ngồi và phát số thứ tự cho Phật tử cao tuổi tham dự buổi khám sức khoẻ và phát thuốc miễn phí. Dự kiến 200–300 người tham gia, tổ chức tại Hội trường lớn tầng 1.</p>',
+    uutien:'Bình thường',
+    thoihan:'2026-05-28',
+    diadiem:'Hội trường lớn, tầng 1',
+    lienhe:'Trần Thị Mai - 0923456789',
+    ghichu:'Cần đăng ký nhân lực hỗ trợ trước 1 tuần',
+    ngayTao:'2026-05-10',
+    trangThai:'Chờ tiếp nhận',
+    likers:[],
+    likedByMe:false,
+    ykien:'',
+    editingYkien:false,
+    daChinhSua:false,
+    ngayChinhSua:null
+  }
 ];
 let proposeCounter=4,editingDxId=null,deletingDxId=null;
 
@@ -735,8 +846,6 @@ function initFixedScroll(){
 function updateFixedScrollPos(){if(window._updateFixedScrollPos)window._updateFixedScrollPos();}
 
 /* HELPERS */
-function fmtDate(d){if(!d)return'—';const p=d.split('-');return`${p[2]}/${p[1]}/${p[0]}`;}
-function fmtDateTime(s){if(!s)return'';const d=new Date(s);const dd=String(d.getDate()).padStart(2,'0'),mm=String(d.getMonth()+1).padStart(2,'0'),yy=d.getFullYear(),hh=String(d.getHours()).padStart(2,'0'),mn=String(d.getMinutes()).padStart(2,'0');return`${dd}/${mm}/${yy} ${hh}:${mn}`;}
 function truncate20words(str){if(!str)return'';const words=str.trim().split(/\s+/);if(words.length<=20)return str.trim();return words.slice(0,20).join(' ')+'…';}
 function stripHtml(html){const t=document.createElement('div');t.innerHTML=html;return(t.textContent||t.innerText||'').trim();}
 function heCmd(cmd){document.getElementById('px_noidung').focus();document.execCommand(cmd,false,null);}
@@ -759,6 +868,44 @@ function initBanDropdowns(){
 const PAGE_SIZE=10;
 let currentPage=1,filteredData=[];
 
+/* Ý KIẾN INLINE EDIT */
+function startEditYkien(id,e){
+  e.stopPropagation();
+  const p=proposeDB.find(x=>x.id===id);
+  if(!p)return;
+  p.editingYkien=true;
+  renderDxTable();
+  setTimeout(()=>{const inp=document.getElementById('ykien-input-'+id);if(inp){inp.focus();inp.value=p.ykien||'';}},0);
+}
+function cancelEditYkien(id,e){
+  e.stopPropagation();
+  const p=proposeDB.find(x=>x.id===id);
+  if(p)p.editingYkien=false;
+  renderDxTable();
+}
+function saveYkien(id,e){
+  e.stopPropagation();
+  const p=proposeDB.find(x=>x.id===id);
+  if(!p)return;
+  const inp=document.getElementById('ykien-input-'+id);
+  p.ykien=inp?inp.value.trim():'';
+  p.editingYkien=false;
+  renderDxTable();
+  showToast('✅ Đã lưu ý kiến!');
+}
+function ykienKeydown(id,e){
+  if(e.key==='Enter'){e.preventDefault();saveYkien(id,e);}
+  if(e.key==='Escape'){e.preventDefault();cancelEditYkien(id,e);}
+}
+
+/* STATUS BADGE */
+function ttBadge(tt){
+  if(tt==='Đã tiếp nhận') return`<span class="badge badge-da-tiep"><span class="dot dot-green"></span>Đã tiếp nhận</span>`;
+  if(tt==='Đang triển khai') return`<span class="badge badge-dang-tk"><span class="dot dot-blue"></span>Đang triển khai</span>`;
+  if(tt==='Đã xong') return`<span class="badge badge-da-xong"><span class="dot dot-darkgreen"></span>Đã xong</span>`;
+  return`<span class="badge badge-cho-tiep"><span class="dot dot-amber"></span>Chờ tiếp nhận</span>`;
+}
+
 /* RENDER TABLE */
 function renderDxTable(){
   const filterBan=document.getElementById('dx-filter-ban').value;
@@ -769,7 +916,7 @@ function renderDxTable(){
     if(filterBan&&p.banB!==filterBan&&p.banA!==filterBan)return false;
     if(filterUu&&p.uutien!==filterUu)return false;
     if(filterTT&&p.trangThai!==filterTT)return false;
-    if(filterSearch){const hay=(p.tieude+' '+stripHtml(p.noidung)+' '+p.ghichu).toLowerCase();if(!hay.includes(filterSearch))return false;}
+    if(filterSearch){const hay=(p.tieude+' '+p.ghichu).toLowerCase();if(!hay.includes(filterSearch))return false;}
     return true;
   });
   const totalPages=Math.max(1,Math.ceil(filteredData.length/PAGE_SIZE));
@@ -789,9 +936,6 @@ function renderDxTable(){
       const uuBadge=p.uutien==='Khẩn cấp'
         ?`<span class="badge badge-khan">Khẩn cấp</span>`
         :`<span class="badge badge-binh">Bình thường</span>`;
-      const ttBadge=p.trangThai==='Đã tiếp nhận'
-        ?`<span class="badge badge-da-tiep"><span class="dot dot-green"></span>Đã tiếp nhận</span>`
-        :`<span class="badge badge-cho-tiep"><span class="dot dot-amber"></span>Chờ tiếp nhận</span>`;
       const likeIcon=p.likedByMe
         ?`<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>`
         :`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>`;
@@ -804,24 +948,35 @@ function renderDxTable(){
         const popoverItems=p.likers.map(l=>`<div class="like-popover-item"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:13px;height:13px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>${l.ban}<span class="like-popover-sep"></span><span class="like-popover-person">${l.nguoi}</span></div>`).join('');
         popoverHtml=`<div class="like-popover${isPopoverOpen?' open':''}" onclick="event.stopPropagation()"><div class="like-popover-title">Đã tiếp nhận (${likeCount})</div>${popoverItems}</div>`;
       }
+      /* Thời hạn: hiển thị âm lịch */
       const dateDisplay=p.thoihan
-        ?`<span style="font-weight:800;color:var(--text-main);font-size:16px;">${fmtLunar(p.thoihan)}</span>`
+        ?`<span style="font-weight:800;color:var(--text-main);font-size:15px;">${fmtLunar(p.thoihan)}</span>`
         :`<span style="color:var(--text-muted);">—</span>`;
-      const ghichuDisplay=p.ghichu
-        ?`<span class="dx-col-ghichu-text">${truncate20words(p.ghichu)}</span>`
-        :`<span style="color:#c0b898;font-size:14px;font-style:italic;">—</span>`;
       const dasuaBadge=p.daChinhSua?`<br><span class="badge-da-sua">✏ Đã sửa</span>`:'';
-      const noidungText=stripHtml(p.noidung);
+      /* Ý kiến cell */
+      let ykienCellHtml='';
+      if(p.editingYkien){
+        ykienCellHtml=`<div class="ykien-cell"><div class="ykien-input-wrap"><input class="ykien-input" id="ykien-input-${p.id}" type="text" value="${(p.ykien||'').replace(/"/g,'&quot;')}" placeholder="Nhập ý kiến..." onkeydown="ykienKeydown(${p.id},event)" onclick="event.stopPropagation()"/><button class="ykien-save-btn" onclick="saveYkien(${p.id},event)" title="Lưu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></button><button class="ykien-cancel-btn" onclick="cancelEditYkien(${p.id},event)" title="Huỷ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div></div>`;
+      } else if(p.ykien){
+        ykienCellHtml=`<div class="ykien-cell"><span class="ykien-text">${p.ykien}</span><button class="ykien-edit-btn" onclick="startEditYkien(${p.id},event)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Sửa</button></div>`;
+      } else {
+        ykienCellHtml=`<div class="ykien-cell"><span class="ykien-empty">Chưa có ý kiến</span><button class="ykien-edit-btn" onclick="startEditYkien(${p.id},event)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Thêm</button></div>`;
+      }
       return`<tr>
         <td class="dx-col-stt"><span class="stt-num">${globalIdx+1}</span></td>
-        <td class="dx-col-tieu"><span style="font-weight:700;font-size:17px;">${p.tieude}</span>${dasuaBadge}</td>
-        <td class="dx-col-noidung"><span class="dx-col-noidung-text">${noidungText||'—'}</span></td>
-        <td class="dx-col-ban"><div class="ban-arrow-cell"><span class="ban-tag-wrap">${p.banA}</span><span class="ban-arrow">↓</span><span class="ban-tag-wrap blue">${p.banB}</span></div></td>
+        <td class="dx-col-ban">
+          <div class="ban-arrow-cell">
+            <span class="ban-tag-wrap">${banNameLines(p.banA)}</span>
+            <span class="ban-arrow">↓</span>
+            <span class="ban-tag-wrap blue">${banNameLines(p.banB)}</span>
+          </div>
+        </td>
+        <td class="dx-col-tieu"><span style="font-weight:700;font-size:15px;line-height:1.5;">${p.tieude}</span>${dasuaBadge}</td>
         <td class="dx-col-uu">${uuBadge}</td>
         <td class="dx-col-tgian">${dateDisplay}</td>
-        <td class="dx-col-tt">${ttBadge}</td>
+        <td class="dx-col-tt">${ttBadge(p.trangThai)}</td>
         <td class="dx-col-like"><div class="like-cell-wrap"><div class="like-popover-wrap"><button class="${likeCls}" onclick="handleLikeClick(${p.id},event)">${likeIcon} ${likeLabel}</button>${popoverHtml}</div></div></td>
-        <td class="dx-col-ghichu">${ghichuDisplay}</td>
+        <td class="dx-col-ykien">${ykienCellHtml}</td>
         <td class="dx-col-thaotac">
           <div class="action-btns">
             <button class="act-btn view" title="Xem chi tiết" onclick="openDxViewModal(${p.id})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
@@ -929,7 +1084,7 @@ function savePropose(){
     closeProposeModal();renderDxTable();showToast('✅ Đã cập nhật đề xuất thành công!');
   }else{
     const now=new Date();
-    proposeDB.unshift({id:proposeCounter++,banA,nguoiTao:CURRENT_USER.ten,chucDanhTao:CURRENT_USER.chucDanh,banB,tieude,noidung,uutien,thoihan,diadiem,lienhe,ghichu,ngayTao:`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`,trangThai:'Chờ tiếp nhận',likers:[],likedByMe:false,daChinhSua:false,ngayChinhSua:null});
+    proposeDB.unshift({id:proposeCounter++,banA,nguoiTao:CURRENT_USER.ten,chucDanhTao:CURRENT_USER.chucDanh,banB,tieude,noidung,uutien,thoihan,diadiem,lienhe,ghichu,ngayTao:`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`,trangThai:'Chờ tiếp nhận',likers:[],likedByMe:false,ykien:'',editingYkien:false,daChinhSua:false,ngayChinhSua:null});
     closeProposeModal();renderDxTable();showToast('✅ Đã gửi đề xuất thành công!');
   }
 }
@@ -945,7 +1100,8 @@ function toggleLike(id){
   p.likedByMe=!p.likedByMe;
   if(p.likedByMe){if(!p.likers.find(l=>l.ban===CURRENT_USER.ban))p.likers.push({ban:CURRENT_USER.ban,nguoi:CURRENT_USER.ten});}
   else{p.likers=p.likers.filter(l=>l.ban!==CURRENT_USER.ban);}
-  p.trangThai=p.likers.length>0?'Đã tiếp nhận':'Chờ tiếp nhận';
+  if(p.likers.length>0 && p.trangThai==='Chờ tiếp nhận') p.trangThai='Đã tiếp nhận';
+  if(p.likers.length===0) p.trangThai='Chờ tiếp nhận';
   showToast(p.likedByMe?'👍 Đã tiếp nhận đề xuất!':'↩️ Đã hủy tiếp nhận');
 }
 
@@ -953,27 +1109,37 @@ function toggleLike(id){
 function openDxViewModal(id){
   const p=proposeDB.find(x=>x.id===id);if(!p)return;
   const uuBadge=p.uutien==='Khẩn cấp'?`<span class="badge badge-khan">Khẩn cấp</span>`:`<span class="badge badge-binh">Bình thường</span>`;
-  const ttBadge=p.trangThai==='Đã tiếp nhận'?`<span class="badge badge-da-tiep"><span class="dot dot-green"></span>Đã tiếp nhận</span>`:`<span class="badge badge-cho-tiep"><span class="dot dot-amber"></span>Chờ tiếp nhận</span>`;
   let likersHtml=p.likers.length>0
     ?`<div class="tiep-nhan-list">${p.likers.map(l=>`<span class="tiep-nhan-item"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:13px;height:13px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>${l.ban} <span style="font-weight:500;opacity:0.75;">(${l.nguoi})</span></span>`).join('')}</div>`
     :`<span style="color:var(--text-muted);font-style:italic;font-size:15px;">Chưa có ban tiếp nhận</span>`;
   const chinhSuaHtml=p.daChinhSua&&p.ngayChinhSua
     ?`<div style="margin-bottom:14px;padding:8px 14px;background:#f5e8fe;border:1px solid #d0a0f0;border-radius:8px;display:flex;align-items:center;gap:8px;"><span class="badge-da-sua">✏ Đã sửa</span><span style="font-size:12px;color:#6b1a8b;font-weight:600;">Lần cuối: ${fmtDateTime(p.ngayChinhSua)}</span></div>`:'';
+  /* Ngày âm lịch */
+  const ngayTaoLunar=p.ngayTao?fmtLunar(p.ngayTao):'—';
+  const thoiHanLunar=p.thoihan?fmtLunar(p.thoihan):'—';
+  const thoiHanDuong=p.thoihan?fmtDate(p.thoihan):'—';
+  const ngayTaoDuong=p.ngayTao?fmtDate(p.ngayTao):'—';
+  /* Ban name 3 từ/dòng trong modal */
+  const banAHtml=`<span class="ban-name-modal green">${banNameLines(p.banA)}</span>`;
+  const banBHtml=`<span class="ban-name-modal blue">${banNameLines(p.banB)}</span>`;
+  const ykienHtml=p.ykien
+    ?`<div style="padding:10px 14px;background:#f0f8f2;border:1.5px solid #b8dfc4;border-radius:8px;font-size:15px;color:var(--text-main);font-style:italic;">${p.ykien}</div>`
+    :`<span style="color:var(--text-muted);font-style:italic;font-size:15px;">Chưa có ý kiến phản hồi</span>`;
   document.getElementById('dxViewModalBody').innerHTML=`
     ${chinhSuaHtml}
     <div style="margin-bottom:14px;">
       <div style="font-size:17px;font-weight:800;color:var(--text-main);margin-bottom:8px;">${p.tieude}</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">${uuBadge}${ttBadge}</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">${uuBadge}${ttBadge(p.trangThai)}</div>
     </div>
     <div class="add-label" style="margin-bottom:6px;">Nội dung đề xuất</div>
     <div class="dxcv-noidung-box">${p.noidung||'<i style="color:var(--text-muted);">Không có nội dung</i>'}</div>
     <div class="dxcv-meta-grid">
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ban đề xuất</div><div class="dxcv-meta-value"><span class="ban-tag-wrap">${p.banA}</span></div></div>
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ban được đề xuất</div><div class="dxcv-meta-value"><span class="ban-tag-wrap blue">${p.banB}</span></div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ban đề xuất</div><div class="dxcv-meta-value">${banAHtml}</div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ban được đề xuất</div><div class="dxcv-meta-value">${banBHtml}</div></div>
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Người tạo</div><div class="dxcv-meta-value">${p.nguoiTao} · ${p.chucDanhTao}</div></div>
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ngày tạo</div><div class="dxcv-meta-value" style="font-weight:800;">${fmtDate(p.ngayTao)}</div></div>
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Thời hạn (Dương lịch)</div><div class="dxcv-meta-value" style="font-weight:800;">${p.thoihan?fmtDate(p.thoihan):'—'}</div></div>
-      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Thời hạn (Âm lịch)</div><div class="dxcv-meta-value" style="font-weight:800;color:var(--green-text);">${p.thoihan?fmtLunar(p.thoihan):'—'}</div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Ngày tạo</div><div class="dxcv-meta-value" style="font-weight:800;">${ngayTaoLunar}<br><span style="font-size:12px;color:var(--text-muted);font-weight:500;">${ngayTaoDuong}</span></div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Thời hạn (Âm lịch)</div><div class="dxcv-meta-value" style="font-weight:800;color:var(--green-text);">${thoiHanLunar}</div></div>
+      <div class="dxcv-meta-item"><div class="dxcv-meta-label">Thời hạn (Dương lịch)</div><div class="dxcv-meta-value" style="font-weight:800;">${thoiHanDuong}</div></div>
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Địa điểm tiếp nhận</div><div class="dxcv-meta-value">${p.diadiem||'—'}</div></div>
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Người liên hệ</div><div class="dxcv-meta-value">${p.lienhe||'—'}</div></div>
       <div class="dxcv-meta-item dxcv-meta-item--full"><div class="dxcv-meta-label">Ghi chú</div><div class="dxcv-meta-value" style="font-style:${p.ghichu?'normal':'italic'};color:${p.ghichu?'var(--text-main)':'var(--text-muted)'};">${p.ghichu||'Không có'}</div></div>
@@ -981,6 +1147,10 @@ function openDxViewModal(id){
     <div class="dxcv-tiep-nhan-section">
       <div class="dxcv-tiep-nhan-label">Ban đã tiếp nhận (${p.likers.length} lượt)</div>
       ${likersHtml}
+    </div>
+    <div style="margin-top:14px;padding:12px 14px;background:#fffbf2;border:1.5px solid #e8d888;border-radius:10px;">
+      <div style="font-size:11px;font-weight:800;color:#8b5a00;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Ý kiến ban nhận</div>
+      ${ykienHtml}
     </div>`;
   document.getElementById('dxViewModal').classList.add('show');
   document.body.style.overflow='hidden';
