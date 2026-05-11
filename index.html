@@ -72,8 +72,9 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .page-title-icon svg { width: 19px; height: 19px; color: var(--burgundy); }
 
 /* FORMS */
-.form-label { font-size: 16px; font-weight: 700; color: var(--burgundy); }
-.form-select, .form-input { height: 36px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 36px 0 12px; font-size: 16px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; }
+/* FIX 2: Nhỏ lại filter controls */
+.form-label { font-size: 14px; font-weight: 700; color: var(--burgundy); }
+.form-select, .form-input { height: 32px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 36px 0 12px; font-size: 14px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; }
 .form-select { appearance: none; -webkit-appearance: none; background-image: var(--caret-svg); background-repeat: no-repeat; background-position: right 12px center; background-size: 14px 14px; cursor: pointer; }
 .form-input { padding-right: 12px; }
 .form-select:focus, .form-input:focus { border-color: var(--input-focus); }
@@ -82,7 +83,8 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .btn-propose { display: flex; align-items: center; gap: 7px; padding: 9px 18px; background: var(--burgundy); color: #fff; border: none; border-radius: 9px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
 .btn-propose:hover { background: #4e1212; }
 .btn-propose svg { width: 16px; height: 16px; }
-.btn-reset { height: 36px; padding: 0 14px; background: var(--burgundy); color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.15s; }
+/* FIX 2: btn-reset nhỏ lại, cùng hàng */
+.btn-reset { height: 32px; padding: 0 12px; background: var(--burgundy); color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
 .btn-reset:hover { background: #4e1212; }
 .btn-cancel { padding: 9px 20px; background: #f0ece4; color: var(--text-muted); border: 1.5px solid var(--border); border-radius: 9px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: all 0.15s; }
 .btn-cancel:hover { background: var(--border); }
@@ -96,11 +98,12 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .dxcv-card-header-title { font-size: 15px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.7px; white-space: nowrap; }
 .dxcv-card-header-count { color: var(--burgundy); font-size: 15px; font-weight: 800; white-space: nowrap; }
 .dxcv-header-sep { width: 1.5px; height: 22px; background: #d4c8b0; flex-shrink: 0; margin: 0 2px; }
-.dxcv-filter-section { padding: 10px 18px 11px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 3px solid #d4c8b0; }
-.filter-group { display: flex; align-items: center; gap: 7px; }
+/* FIX 2: filter section cùng hàng, nhỏ gọn */
+.dxcv-filter-section { padding: 7px 18px 8px; display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; border-bottom: 3px solid #d4c8b0; overflow-x: auto; }
+.filter-group { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
 .filter-search-wrap { position: relative; display: flex; align-items: center; }
-.filter-search-wrap svg { position: absolute; left: 10px; width: 15px; height: 15px; color: #b09070; pointer-events: none; }
-.filter-search-input { height: 36px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 12px 0 32px; font-size: 16px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; width: 200px; transition: border-color 0.15s; }
+.filter-search-wrap svg { position: absolute; left: 10px; width: 14px; height: 14px; color: #b09070; pointer-events: none; }
+.filter-search-input { height: 32px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 12px 0 30px; font-size: 14px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; width: 150px; transition: border-color 0.15s; }
 .filter-search-input:focus { border-color: var(--input-focus); }
 .filter-search-input::placeholder { color: #c0a878; }
 
@@ -132,7 +135,6 @@ tr:hover td { background: var(--row-hover) !important; }
 .dx-col-tgian { width: 120px; text-align: center; }
 .dx-col-tt { width: 160px; text-align: center; }
 .dx-col-like { width: 90px; text-align: center; }
-/* FIX 2: Tăng chiều rộng cột ý kiến */
 .dx-col-ykien { min-width: 200px; max-width: 300px; text-align: center; }
 .dx-col-thaotac { width: 90px; text-align: center; }
 
@@ -169,9 +171,6 @@ tr:hover td { background: var(--row-hover) !important; }
 .dot-blue { background: #1a3a8b; }
 .dot-darkgreen { background: #1a4a2e; }
 
-/* =====================================================
-   FIX 4: TRẠNG THÁI DROPDOWN — NỀN TRẮNG
-   ===================================================== */
 .tt-dropdown-wrap { position: relative; display: inline-block; }
 .tt-dropdown-select {
   appearance: none;
@@ -191,15 +190,12 @@ tr:hover td { background: var(--row-hover) !important; }
   transition: opacity 0.15s;
 }
 .tt-dropdown-select:hover { opacity: 0.82; }
-/* FIX 4: Tất cả trạng thái dùng nền trắng, chỉ khác màu chữ và border */
 .tt-dropdown-select.tt-cho   { background-color: #ffffff; color: #8b5a00; border: 1.5px solid #f0c840; }
 .tt-dropdown-select.tt-da    { background-color: #ffffff; color: #1a6b3a; border: 1.5px solid #a0d8b0; }
 .tt-dropdown-select.tt-dang  { background-color: #ffffff; color: #1a3a8b; border: 1.5px solid #a0b8f0; }
 .tt-dropdown-select.tt-xong  { background-color: #ffffff; color: #1a4a2e; border: 1.5px solid #80c880; }
 
-/* =====================================================
-   LIKE BUTTON
-   ===================================================== */
+/* LIKE BUTTON */
 .like-cell-wrap { display: flex; justify-content: center; }
 .like-btn {
   display: inline-flex;
@@ -233,9 +229,7 @@ tr:hover td { background: var(--row-hover) !important; }
 .like-popover-empty { padding: 6px 12px; font-size: 13px; color: var(--text-muted); font-style: italic; }
 .like-popover::after { content: ''; position: absolute; bottom: -6px; left: 50%; width: 10px; height: 10px; background: #fff; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transform: translateX(-50%) rotate(45deg); }
 
-/* =====================================================
-   FIX 2: Ý KIẾN CELL — contenteditable inline editing
-   ===================================================== */
+/* Ý KIẾN CELL */
 .ykien-cell {
   position: relative;
   display: flex;
@@ -256,7 +250,6 @@ tr:hover td { background: var(--row-hover) !important; }
   gap: 3px;
   margin-top: 1px;
 }
-/* Icon bút chì */
 .ykien-pencil-btn {
   position: absolute;
   top: 0;
@@ -278,7 +271,6 @@ tr:hover td { background: var(--row-hover) !important; }
 .ykien-pencil-btn:hover { color: #7a3a00; background: #f5ede0; }
 .ykien-pencil-btn svg { width: 13px; height: 13px; }
 
-/* FIX 2: Contenteditable div thay thế input */
 .ykien-editable-cell { padding-right: 0; }
 .ykien-editable {
   width: 100%;
@@ -467,18 +459,6 @@ tr:hover td { background: var(--row-hover) !important; }
 .back-to-top.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
 .back-to-top:hover { background: #5a2800; }
 .back-to-top svg { width: 20px; height: 20px; }
-
-/* FIX 1: PAGE CORNER — màu vàng đồng hợp tông */
-.page-corner {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 120px;
-  height: 120px;
-  pointer-events: none;
-  z-index: 50;
-  opacity: 0.55;
-}
 </style>
 </head>
 <body>
@@ -554,18 +534,6 @@ tr:hover td { background: var(--row-hover) !important; }
   </div>
 </div>
 
-<!-- FIX 1: PAGE CORNER — dùng màu vàng đồng phù hợp topbar, không dùng màu nâu đỏ tối -->
-<svg class="page-corner" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M120 120 L0 120 L0 100 Q60 100 60 40 L120 40 Z" fill="#e8c840" opacity="0.22"/>
-  <path d="M120 120 L30 120 L30 80 Q80 80 80 30 L120 30 Z" fill="#d4b020" opacity="0.28"/>
-  <path d="M120 120 L60 120 L60 60 L120 60 Z" fill="#c09800" opacity="0.32"/>
-  <line x1="120" y1="30" x2="80" y2="30" stroke="#a07800" stroke-width="1.5" opacity="0.6"/>
-  <line x1="120" y1="60" x2="60" y2="60" stroke="#a07800" stroke-width="1.5" opacity="0.6"/>
-  <line x1="120" y1="90" x2="30" y2="90" stroke="#a07800" stroke-width="1.5" opacity="0.6"/>
-  <circle cx="105" cy="105" r="9" fill="#fad96a" opacity="0.75"/>
-  <circle cx="105" cy="105" r="4.5" fill="#a07800" opacity="0.55"/>
-</svg>
-
 <!-- FIXED BOTTOM SCROLLBAR -->
 <div class="fixed-scroll-track" id="fixedScrollTrack">
   <div class="fixed-scroll-inner" id="fixedScrollInner"></div>
@@ -593,16 +561,17 @@ tr:hover td { background: var(--row-hover) !important; }
       <span class="dxcv-card-header-title">Danh Sách Đề Xuất</span>
       <span class="dxcv-card-header-count">(<span id="dx-count">0</span>)</span>
     </div>
+    <!-- FIX 2: tất cả filter + nút Đặt lại cùng một hàng, nhỏ gọn hơn -->
     <div class="dxcv-filter-section">
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Lọc theo ban:</label>
-        <select class="form-select" id="dx-filter-ban" style="width:190px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-ban" style="width:155px;" onchange="renderDxTable()">
           <option value="">— Tất cả các ban —</option>
         </select>
       </div>
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Ưu tiên:</label>
-        <select class="form-select" id="dx-filter-uu" style="width:140px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-uu" style="width:115px;" onchange="renderDxTable()">
           <option value="">— Tất cả —</option>
           <option value="Khẩn cấp">Khẩn cấp</option>
           <option value="Bình thường">Bình thường</option>
@@ -610,7 +579,7 @@ tr:hover td { background: var(--row-hover) !important; }
       </div>
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Trạng thái:</label>
-        <select class="form-select" id="dx-filter-tt" style="width:170px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-tt" style="width:145px;" onchange="renderDxTable()">
           <option value="">— Tất cả —</option>
           <option value="Chờ tiếp nhận">Chờ tiếp nhận</option>
           <option value="Đã tiếp nhận">Đã tiếp nhận</option>
@@ -849,72 +818,9 @@ function banNameLines(name){
 }
 
 let proposeDB=[
-  {
-    id:1,
-    banA:'Ban Hương Đăng',
-    nguoiTao:'Nguyễn Thị Lan',
-    chucDanhTao:'Trưởng Ban',
-    banB:'Ban Tri Sự',
-    tieude:'Nhờ xe tải chở 2 thùng kinh mới về thư viện',
-    noidung:'<p>Ban Hương Đăng kính nhờ Ban Tri Sự điều phối xe tải chở 2 thùng kinh sách mới (tổng khoảng 80kg) từ cổng chùa về đến Ban Thư Viện tầng 2. Dự kiến hàng về vào sáng ngày 15/05/2026, khoảng 8h–9h. Kính nhờ sắp xếp nhân lực bốc xếp và phương tiện phù hợp.</p>',
-    uutien:'Khẩn cấp',
-    thoihan:'2026-05-15',
-    diadiem:'Ban Thư Viện, tầng 2',
-    lienhe:'Nguyễn Thị Lan - 0901234567',
-    ghichu:'Cần hoàn tất trước buổi trưa ngày 15/05',
-    ngayTao:'2026-05-08',
-    trangThai:'Đã tiếp nhận',
-    likers:[{ban:'Ban Tri Sự',nguoi:'Phan Tuấn Anh'}],
-    likedByMe:true,
-    ykien:'Đã sắp xếp xe và 2 nhân lực, xuất phát lúc 7h30.',
-    editingYkien:false,
-    daChinhSua:false,
-    ngayChinhSua:null
-  },
-  {
-    id:2,
-    banA:'Ban Vườn',
-    nguoiTao:'Trần Văn Hùng',
-    chucDanhTao:'Tổ Trưởng',
-    banB:'Ban Tri Sự',
-    tieude:'Nhờ chở hoa lên sân chánh điện để trang trí',
-    noidung:'<p>Ban Vườn kính nhờ Ban Tri Sự hỗ trợ phương tiện vận chuyển hoa tươi (cúc vàng, sen trắng) từ khu vườn phía sau lên sân chánh điện tầng 1 để trang trí cho Đại Lễ Phật Đản. Ước tính 15–20 chậu lớn và khoảng 50 bó hoa cắt cành.</p>',
-    uutien:'Khẩn cấp',
-    thoihan:'2026-05-14',
-    diadiem:'Sân Chánh Điện tầng 1',
-    lienhe:'Trần Văn Hùng - 0912345678',
-    ghichu:'Cần hoàn tất trước 6h sáng ngày 14/05',
-    ngayTao:'2026-05-09',
-    trangThai:'Đang triển khai',
-    likers:[{ban:'Ban Tri Sự',nguoi:'Phan Tuấn Anh'}],
-    likedByMe:true,
-    ykien:'Đã điều xe và 3 người hỗ trợ, xuất phát 5h30 sáng.',
-    editingYkien:false,
-    daChinhSua:false,
-    ngayChinhSua:null
-  },
-  {
-    id:3,
-    banA:'Ban Y Tế',
-    nguoiTao:'Trần Thị Mai',
-    chucDanhTao:'Tổ Trưởng',
-    banB:'Ban An Sinh',
-    tieude:'Phối hợp tổ chức khám sức khoẻ miễn phí cho Phật tử cao tuổi',
-    noidung:'<p>Ban Y Tế kính nhờ Ban An Sinh hỗ trợ công tác đăng ký, sắp xếp chỗ ngồi và phát số thứ tự cho Phật tử cao tuổi tham dự buổi khám sức khoẻ và phát thuốc miễn phí. Dự kiến 200–300 người tham gia, tổ chức tại Hội trường lớn tầng 1.</p>',
-    uutien:'Bình thường',
-    thoihan:'2026-05-28',
-    diadiem:'Hội trường lớn, tầng 1',
-    lienhe:'Trần Thị Mai - 0923456789',
-    ghichu:'Cần đăng ký nhân lực hỗ trợ trước 1 tuần',
-    ngayTao:'2026-05-10',
-    trangThai:'Chờ tiếp nhận',
-    likers:[],
-    likedByMe:false,
-    ykien:'',
-    editingYkien:false,
-    daChinhSua:false,
-    ngayChinhSua:null
-  }
+  {id:1,banA:'Ban Hương Đăng',nguoiTao:'Nguyễn Thị Lan',chucDanhTao:'Trưởng Ban',banB:'Ban Tri Sự',tieude:'Nhờ xe tải chở 2 thùng kinh mới về thư viện',noidung:'<p>Ban Hương Đăng kính nhờ Ban Tri Sự điều phối xe tải chở 2 thùng kinh sách mới (tổng khoảng 80kg) từ cổng chùa về đến Ban Thư Viện tầng 2. Dự kiến hàng về vào sáng ngày 15/05/2026, khoảng 8h–9h. Kính nhờ sắp xếp nhân lực bốc xếp và phương tiện phù hợp.</p>',uutien:'Khẩn cấp',thoihan:'2026-05-15',diadiem:'Ban Thư Viện, tầng 2',lienhe:'Nguyễn Thị Lan - 0901234567',ghichu:'Cần hoàn tất trước buổi trưa ngày 15/05',ngayTao:'2026-05-08',trangThai:'Đã tiếp nhận',likers:[{ban:'Ban Tri Sự',nguoi:'Phan Tuấn Anh'}],likedByMe:true,ykien:'Đã sắp xếp xe và 2 nhân lực, xuất phát lúc 7h30.',editingYkien:false,daChinhSua:false,ngayChinhSua:null},
+  {id:2,banA:'Ban Vườn',nguoiTao:'Trần Văn Hùng',chucDanhTao:'Tổ Trưởng',banB:'Ban Tri Sự',tieude:'Nhờ chở hoa lên sân chánh điện để trang trí',noidung:'<p>Ban Vườn kính nhờ Ban Tri Sự hỗ trợ phương tiện vận chuyển hoa tươi (cúc vàng, sen trắng) từ khu vườn phía sau lên sân chánh điện tầng 1 để trang trí cho Đại Lễ Phật Đản. Ước tính 15–20 chậu lớn và khoảng 50 bó hoa cắt cành.</p>',uutien:'Khẩn cấp',thoihan:'2026-05-14',diadiem:'Sân Chánh Điện tầng 1',lienhe:'Trần Văn Hùng - 0912345678',ghichu:'Cần hoàn tất trước 6h sáng ngày 14/05',ngayTao:'2026-05-09',trangThai:'Đang triển khai',likers:[{ban:'Ban Tri Sự',nguoi:'Phan Tuấn Anh'}],likedByMe:true,ykien:'Đã điều xe và 3 người hỗ trợ, xuất phát 5h30 sáng.',editingYkien:false,daChinhSua:false,ngayChinhSua:null},
+  {id:3,banA:'Ban Y Tế',nguoiTao:'Trần Thị Mai',chucDanhTao:'Tổ Trưởng',banB:'Ban An Sinh',tieude:'Phối hợp tổ chức khám sức khoẻ miễn phí cho Phật tử cao tuổi',noidung:'<p>Ban Y Tế kính nhờ Ban An Sinh hỗ trợ công tác đăng ký, sắp xếp chỗ ngồi và phát số thứ tự cho Phật tử cao tuổi tham dự buổi khám sức khoẻ và phát thuốc miễn phí. Dự kiến 200–300 người tham gia, tổ chức tại Hội trường lớn tầng 1.</p>',uutien:'Bình thường',thoihan:'2026-05-28',diadiem:'Hội trường lớn, tầng 1',lienhe:'Trần Thị Mai - 0923456789',ghichu:'Cần đăng ký nhân lực hỗ trợ trước 1 tuần',ngayTao:'2026-05-10',trangThai:'Chờ tiếp nhận',likers:[],likedByMe:false,ykien:'',editingYkien:false,daChinhSua:false,ngayChinhSua:null}
 ];
 let proposeCounter=4,editingDxId=null,deletingDxId=null;
 
@@ -978,7 +884,7 @@ function changeTrangThai(id, newVal){
   showToast('✅ Đã cập nhật trạng thái!');
 }
 
-/* FIX 2: Ý KIẾN — contenteditable inline editing */
+/* Ý KIẾN — contenteditable inline editing */
 function startEditYkien(id,e){
   e.stopPropagation();
   const p=proposeDB.find(x=>x.id===id);
@@ -989,7 +895,6 @@ function startEditYkien(id,e){
     const div=document.getElementById('ykien-input-'+id);
     if(div){
       div.focus();
-      // Đặt con trỏ ở cuối text
       const range=document.createRange();
       range.selectNodeContents(div);
       range.collapse(false);
@@ -1078,7 +983,6 @@ function renderDxTable(){
         ?`<span style="font-weight:800;color:var(--text-main);font-size:15px;">${fmtLunar(p.thoihan)}</span>`
         :`<span style="color:var(--text-muted);">—</span>`;
 
-      /* FIX 4: TRẠNG THÁI — nền trắng */
       const ttCls = ttDropdownClass(p.trangThai);
       const ttDropdown = `
         <div class="tt-dropdown-wrap">
@@ -1090,21 +994,12 @@ function renderDxTable(){
           </select>
         </div>`;
 
-      /* FIX 2: Ý KIẾN — contenteditable inline, to và rõ hơn */
       let ykienCellHtml='';
       if(p.editingYkien){
-        // Escape text để dùng trong contenteditable
         const safeText=(p.ykien||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
         ykienCellHtml=`
           <div class="ykien-cell ykien-editable-cell">
-            <div
-              class="ykien-editable"
-              id="ykien-input-${p.id}"
-              contenteditable="true"
-              data-placeholder="Nhập ý kiến..."
-              onkeydown="ykienKeydown(${p.id},event)"
-              onclick="event.stopPropagation()"
-            >${safeText}</div>
+            <div class="ykien-editable" id="ykien-input-${p.id}" contenteditable="true" data-placeholder="Nhập ý kiến..." onkeydown="ykienKeydown(${p.id},event)" onclick="event.stopPropagation()">${safeText}</div>
             <div class="ykien-edit-actions">
               <button class="ykien-cancel-btn" onclick="cancelEditYkien(${p.id},event)">Huỷ</button>
               <button class="ykien-save-btn" onclick="saveYkien(${p.id},event)">
@@ -1115,10 +1010,7 @@ function renderDxTable(){
           </div>`;
       } else if(p.ykien){
         const editedNote = p.daChinhSua
-          ? `<span class="ykien-edited-note">
-               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-               Đã chỉnh sửa
-             </span>`
+          ? `<span class="ykien-edited-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Đã chỉnh sửa</span>`
           : '';
         ykienCellHtml=`
           <div class="ykien-cell">
@@ -1129,7 +1021,6 @@ function renderDxTable(){
             </button>
           </div>`;
       } else {
-        /* FIX 3: Ô trống — chỉ hiện dấu + nhỏ */
         ykienCellHtml=`
           <div class="ykien-cell">
             <button class="ykien-pencil-btn" onclick="startEditYkien(${p.id},event)" title="Thêm ý kiến" style="position:static;width:26px;height:26px;">
