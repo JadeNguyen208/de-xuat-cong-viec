@@ -29,22 +29,7 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .topbar-brand { display: flex; align-items: center; gap: 10px; padding-right: 18px; border-right: 1.5px solid var(--tb-sep); flex-shrink: 0; }
 .logo-icon { width: 32px; height: 32px; border-radius: 7px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 1px 4px rgba(90,45,0,0.15); flex-shrink: 0; }
 .app-name { font-size: 16px; font-weight: 800; color: var(--burgundy); white-space: nowrap; }
-.hamburger-wrapper { position: relative; flex-shrink: 0; }
-.hamburger-btn { width: 32px; height: 32px; border-radius: 7px; background: rgba(255,255,255,0.5); border: 1.5px solid rgba(90,45,0,0.18); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; flex-shrink: 0; }
-.hamburger-btn:hover, .hamburger-btn.active { background: rgba(255,255,255,0.75); border-color: rgba(90,45,0,0.3); }
-.hamburger-btn svg { width: 17px; height: 17px; color: var(--tb-text); }
-.hm-menu { position: absolute; top: calc(100% + 10px); left: 0; width: 230px; background: #fff; border-radius: 12px; box-shadow: 0 8px 40px rgba(0,0,0,0.16),0 2px 8px rgba(0,0,0,0.07); border: 1px solid rgba(0,0,0,0.07); overflow: hidden; z-index: 200; opacity: 0; transform: translateY(-8px) scale(0.97); transform-origin: top left; pointer-events: none; transition: opacity 0.18s ease,transform 0.18s ease; }
-.hm-menu.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: all; }
-.hm-header { padding: 11px 14px 8px; border-bottom: 1px solid #f0ece4; }
-.hm-header-label { font-size: 14px; font-weight: 800; color: #b09070; letter-spacing: 0.8px; text-transform: uppercase; }
-.hm-item { display: flex; align-items: center; gap: 10px; padding: 10px 16px; cursor: pointer; transition: background 0.12s; font-size: 15px; font-weight: 600; color: #3a2000; }
-.hm-item:hover { background: #fdf8ee; }
-.hm-item.active { background: #fef6d6; color: var(--burgundy); }
-.hm-item.disabled { opacity: 0.45; cursor: default; }
-.hm-item.disabled:hover { background: none; }
-.hm-item svg { width: 17px; height: 17px; color: #8b4a00; flex-shrink: 0; }
-.hm-item.active svg { color: var(--burgundy); }
-.topbar-datetime { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 18px; border-right: 1.5px solid var(--tb-sep); line-height: 1.25; flex-shrink: 0; }
+.topbar-datetime { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 0 18px; border-right: 1.5px solid var(--tb-sep); line-height: 1.25; flex-shrink: 0; }
 .topbar-datetime .dt-duong { font-size: 15px; font-weight: 700; color: var(--tb-text); white-space: nowrap; }
 .topbar-datetime .dt-am { font-size: 13px; color: var(--tb-lunar); font-weight: 500; white-space: nowrap; }
 .topbar-actions { display: flex; align-items: center; gap: 6px; margin-left: auto; flex-shrink: 0; }
@@ -62,154 +47,122 @@ body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--page-bg); mi
 .user-info .user-name { font-size: 15px; font-weight: 800; color: var(--tb-text); white-space: nowrap; line-height: 1.2; }
 .user-info .user-role { font-size: 13px; color: var(--tb-lunar); font-weight: 500; white-space: nowrap; line-height: 1.2; }
 .user-chevron { width: 14px; height: 14px; color: var(--tb-lunar); flex-shrink: 0; }
-.ud-menu { position: absolute; top: calc(100% + 10px); right: 0; width: 240px; background: #fff; border-radius: 12px; box-shadow: 0 8px 40px rgba(0,0,0,0.16); border: 1px solid rgba(0,0,0,0.07); overflow: hidden; z-index: 200; opacity: 0; transform: translateY(-8px) scale(0.97); transform-origin: top right; pointer-events: none; transition: opacity 0.18s ease,transform 0.18s ease; }
+.ud-menu { position: absolute; top: calc(100% + 10px); right: 0; width: 260px; background: #fff; border-radius: 12px; box-shadow: 0 8px 40px rgba(0,0,0,0.16); border: 1px solid rgba(0,0,0,0.07); overflow: hidden; z-index: 200; opacity: 0; transform: translateY(-8px) scale(0.97); transform-origin: top right; pointer-events: none; transition: opacity 0.18s ease,transform 0.18s ease; }
 .ud-menu.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: all; }
 .ud-header { padding: 14px 16px 10px; border-bottom: 1px solid #f0ece4; }
 .ud-name { font-size: 15px; font-weight: 800; color: #2c1a00; }
 .ud-role { font-size: 14px; color: #8b4a00; font-weight: 500; margin-top: 2px; }
 .ud-item { display: flex; align-items: center; gap: 10px; padding: 10px 16px; cursor: pointer; transition: background 0.12s; font-size: 15px; font-weight: 500; color: #3a2000; }
 .ud-item:hover { background: #fdf8ee; }
+.ud-item.active { background: #fef6d6; color: var(--burgundy); font-weight: 700; }
+.ud-item.disabled { opacity: 0.45; cursor: default; }
+.ud-item.disabled:hover { background: none; }
 .ud-item svg { width: 17px; height: 17px; color: #8b4a00; flex-shrink: 0; }
+.ud-item.active svg { color: var(--burgundy); }
 .ud-sep { height: 1px; background: #f0ece4; margin: 4px 0; }
 .ud-item.danger { color: #c0392b; }
 .ud-item.danger svg { color: #c0392b; }
+.ud-section-label { font-size: 11px; font-weight: 800; color: #b09070; letter-spacing: 0.8px; text-transform: uppercase; padding: 8px 16px 4px; }
 
 /* PAGE LAYOUT */
-.page-wrapper { max-width: 1400px; margin: 0 auto; padding: 0 28px 24px; }
+.page-wrapper { width: 100%; padding: 0 16px 24px; }
 .page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; padding-top: 14px; }
 .page-title { font-size: 22px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
 .page-title-icon { width: 36px; height: 36px; background: #ffffff; border: 2px solid var(--tb-border); border-radius: 9px; display: flex; align-items: center; justify-content: center; }
 .page-title-icon svg { width: 19px; height: 19px; color: var(--burgundy); }
 
 /* FORMS */
-.form-label { font-size: 15px; font-weight: 700; color: var(--burgundy); }
-.form-select, .form-input { height: 36px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 36px 0 12px; font-size: 15px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; }
+.form-label { font-size: 16px; font-weight: 700; color: var(--burgundy); }
+.form-select, .form-input { height: 36px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 36px 0 12px; font-size: 16px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; }
 .form-select { appearance: none; -webkit-appearance: none; background-image: var(--caret-svg); background-repeat: no-repeat; background-position: right 12px center; background-size: 14px 14px; cursor: pointer; }
 .form-input { padding-right: 12px; }
 .form-select:focus, .form-input:focus { border-color: var(--input-focus); }
 
 /* BUTTONS */
-/* CHANGED: btn-propose now uses burgundy */
 .btn-propose { display: flex; align-items: center; gap: 7px; padding: 9px 18px; background: var(--burgundy); color: #fff; border: none; border-radius: 9px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
 .btn-propose:hover { background: #4e1212; }
 .btn-propose svg { width: 16px; height: 16px; }
-.btn-reset { height: 36px; padding: 0 14px; background: #f0ece4; color: var(--text-muted); border: 1.5px solid var(--border); border-radius: 8px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.15s; }
-.btn-reset:hover { background: #e8e0d0; }
+.btn-reset { height: 36px; padding: 0 14px; background: var(--burgundy); color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.15s; }
+.btn-reset:hover { background: #4e1212; }
 .btn-cancel { padding: 9px 20px; background: #f0ece4; color: var(--text-muted); border: 1.5px solid var(--border); border-radius: 9px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: all 0.15s; }
 .btn-cancel:hover { background: var(--border); }
 .btn-save { padding: 9px 24px; background: #7a3a00; color: #fff; border: none; border-radius: 9px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: background 0.15s; display: flex; align-items: center; gap: 7px; }
 .btn-save:hover { background: #5a2800; }
 .btn-save svg { width: 15px; height: 15px; }
 
-/* MERGED CARD: Filter + Header in one container */
-.dxcv-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 1px 4px rgba(90,45,0,0.06); overflow: hidden; margin-bottom: 0; }
+/* Merged top section */
+.dxcv-merged-top { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 1px 4px rgba(90,45,0,0.06); margin-bottom: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-bottom: none; }
+.dxcv-card-header { padding: 11px 18px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #f0ece4; }
+.dxcv-card-header-title { font-size: 15px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.7px; white-space: nowrap; }
+.dxcv-card-header-count { color: var(--burgundy); font-size: 15px; font-weight: 800; white-space: nowrap; }
+.dxcv-header-sep { width: 1.5px; height: 22px; background: #d4c8b0; flex-shrink: 0; margin: 0 2px; }
+.dxcv-filter-section { padding: 10px 18px 11px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 3px solid #d4c8b0; }
+.filter-group { display: flex; align-items: center; gap: 7px; }
+.filter-search-wrap { position: relative; display: flex; align-items: center; }
+.filter-search-wrap svg { position: absolute; left: 10px; width: 15px; height: 15px; color: #b09070; pointer-events: none; }
+.filter-search-input { height: 36px; border: 1.5px solid var(--input-border); border-radius: 8px; padding: 0 12px 0 32px; font-size: 16px; font-family: inherit; color: var(--text-main); background: #fff; outline: none; width: 200px; transition: border-color 0.15s; }
+.filter-search-input:focus { border-color: var(--input-focus); }
+.filter-search-input::placeholder { color: #c0a878; }
 
-/* Merged top section: filter bar + card header in one block */
-.dxcv-merged-top {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: 0 1px 4px rgba(90,45,0,0.06);
-  margin-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom: none;
-}
-
-.dxcv-filter-section {
-  padding: 14px 22px 12px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #f0ece4;
-}
-
-.filter-group { display: flex; align-items: center; gap: 8px; }
-
-.dxcv-card-header {
-  padding: 12px 22px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 2px solid #d4c8b0;
-}
-.dxcv-card-header-title { font-size: 15px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.7px; }
-.dxcv-card-header-count { background: #fef6d6; color: #7a3a00; border: 1px solid #f0c840; border-radius: 20px; font-size: 13px; font-weight: 800; padding: 2px 10px; }
-
-/* Table wrapper — connected below merged top */
-.dxcv-table-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-top: none;
-  border-radius: 0 0 14px 14px;
-  box-shadow: 0 1px 4px rgba(90,45,0,0.06);
-  overflow: hidden;
-}
+/* TABLE CARD */
+.dxcv-table-card { background: var(--card-bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 14px 14px; box-shadow: 0 1px 4px rgba(90,45,0,0.06); overflow: hidden; }
 
 /* SCROLL */
 .table-wrapper { overflow-x: auto; overflow-y: visible; scrollbar-width: none; }
 .table-wrapper::-webkit-scrollbar { display: none; }
 
 /* FIXED BOTTOM SCROLLBAR */
-.fixed-scroll-track {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 14px;
-  background: var(--card-bg);
-  border-top: 1px solid var(--border);
-  overflow-x: auto;
-  overflow-y: hidden;
-  z-index: 300;
-  display: none;
-}
+.fixed-scroll-track { position: fixed; bottom: 0; left: 0; right: 0; height: 14px; background: var(--card-bg); border-top: 1px solid var(--border); overflow-x: auto; overflow-y: hidden; z-index: 300; display: none; }
 .fixed-scroll-inner { height: 1px; }
 
 /* TABLE */
 table { width: 100%; border-collapse: collapse; font-size: 16px; }
 thead { background: #fff; }
-th { padding: 12px 14px; text-align: left; font-size: 14px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.6px; white-space: nowrap; border-bottom: 2px solid #d4c8b0; }
-td { padding: 10px 12px; border-bottom: 1px solid #f0ece4; color: var(--text-main); vertical-align: middle; font-size: 16px; }
+th { padding: 14px 14px; text-align: center; font-size: 16px; font-weight: 800; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 2px solid #d4c8b0; vertical-align: middle; white-space: nowrap; }
+td { padding: 20px 14px; border-bottom: 1px solid #f0ece4; color: var(--text-main); vertical-align: middle; font-size: 16px; }
 tr:last-child td { border-bottom: none; }
 tr:nth-child(even) td { background: var(--row-stripe); }
 tr:hover td { background: var(--row-hover) !important; }
 
-/* COLUMN WIDTHS */
+/* COLUMN WIDTHS & ALIGNMENT */
 .dx-col-stt { width: 44px; text-align: center; }
-.dx-col-tieu { min-width: 160px; max-width: 200px; }
+
+/* ✅ FIX: Tiêu đề — căn giữa (th đã căn giữa theo global, td cũng căn giữa) */
+.dx-col-tieu { min-width: 160px; max-width: 200px; text-align: center; }
+
+/* ✅ FIX: Nội dung — th căn giữa (global), td căn trái */
 .dx-col-noidung { min-width: 320px; max-width: 380px; }
-.dx-col-ban-de { width: 90px; }
-.dx-col-ban-nhan { width: 90px; }
-.dx-col-uu { width: 110px; }
-.dx-col-tgian { width: 120px; }
-.dx-col-tt { width: 140px; }
+td.dx-col-noidung { text-align: left; padding-left: 16px; padding-right: 14px; }
+
+/* Ban đề xuất → Nhận — căn giữa */
+.dx-col-ban { width: 150px; text-align: center; }
+.ban-arrow-cell { display: flex; flex-direction: column; gap: 3px; align-items: center; }
+.ban-arrow { font-size: 13px; color: #b09070; font-weight: 600; padding: 0 2px; }
+
+/* Ưu tiên — căn giữa */
+.dx-col-uu { width: 110px; text-align: center; }
+
+/* Thời hạn — căn giữa */
+.dx-col-tgian { width: 120px; text-align: center; }
+
+/* Trạng thái — căn giữa */
+.dx-col-tt { width: 140px; text-align: center; }
+
+/* Tiếp nhận — căn giữa */
 .dx-col-like { width: 110px; text-align: center; }
-.dx-col-ghichu { min-width: 110px; max-width: 150px; }
+
+/* Ghi chú — căn trái */
+.dx-col-ghichu { min-width: 110px; max-width: 150px; text-align: left; }
+
+/* Thao tác — căn giữa */
 .dx-col-thaotac { width: 90px; text-align: center; }
 
-.ban-tag-wrap {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 600;
-  background: #fef6d6;
-  color: #7a3a00;
-  border: 1px solid #f0d840;
-  border-radius: 4px;
-  padding: 3px 7px;
-  word-break: break-word;
-  white-space: normal;
-  line-height: 1.4;
-  max-width: 84px;
-}
-.ban-tag-wrap.blue {
-  background: #e8f0fe;
-  color: #1a3a8b;
-  border-color: #a0b8f0;
-}
+/* BAN TAG */
+.ban-tag-wrap { display: inline-block; font-size: 18px; font-weight: 700; background: none; color: #1a5a3a; border: none; border-radius: 0; padding: 0; word-break: keep-all; white-space: normal; line-height: 1.5; max-width: 140px; text-align: center; }
+.ban-tag-wrap.blue { color: #1a3a8b; }
 
-.dx-col-noidung-text { font-size: 16px; color: var(--text-muted); line-height: 1.5; }
+/* ✅ FIX: NOIDUNG TEXT — căn trái (th header vẫn căn giữa theo global) */
+.dx-col-noidung-text { font-size: 16px; color: #1a0f00; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-align: left; }
 .dx-col-ghichu-text { font-size: 16px; color: var(--text-muted); font-style: italic; line-height: 1.4; }
 
 .stt-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; background: #f0ece4; font-size: 16px; font-weight: 700; color: var(--text-muted); }
@@ -217,7 +170,7 @@ tr:hover td { background: var(--row-hover) !important; }
 /* BADGES */
 .badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 20px; font-size: 16px; font-weight: 700; white-space: nowrap; }
 .badge-khan { background: #fff0f0; color: #c0392b; border: 1px solid #f0b8b8; }
-.badge-binh { background: #e8f0fe; color: #1a3a8b; border: 1px solid #a0b8f0; }
+.badge-binh { background: #e8f5ee; color: #1a6b3a; border: 1px solid #a0d8b0; }
 .badge-cho-tiep { background: #fff8e6; color: #8b5a00; border: 1px solid #f0c840; }
 .badge-da-tiep { background: #e8f5ee; color: #1a6b3a; border: 1px solid #a0d8b0; }
 .badge-da-sua { display: inline-flex; align-items: center; gap: 3px; padding: 2px 7px; border-radius: 10px; font-size: 13px; font-weight: 700; background: #f0e8fe; color: #6b1a8b; border: 1px solid #d0a0f0; white-space: nowrap; }
@@ -225,18 +178,9 @@ tr:hover td { background: var(--row-hover) !important; }
 .dot-green { background: var(--green-text); }
 .dot-amber { background: var(--amber-text); }
 
-/* LIKE BUTTON — compact, popover on click */
+/* LIKE BUTTON */
 .like-cell-wrap { display: flex; justify-content: center; }
-
-.like-btn {
-  display: inline-flex; align-items: center; gap: 5px;
-  padding: 5px 11px; border-radius: 20px;
-  border: 1.5px solid #d4c8b0; background: #fff;
-  cursor: pointer; font-size: 15px; font-weight: 700;
-  color: var(--text-muted); font-family: inherit;
-  transition: all 0.18s; white-space: nowrap;
-  position: relative;
-}
+.like-btn { display: inline-flex; align-items: center; gap: 5px; padding: 5px 11px; border-radius: 20px; border: 1.5px solid #d4c8b0; background: #fff; cursor: pointer; font-size: 15px; font-weight: 700; color: var(--text-muted); font-family: inherit; transition: all 0.18s; white-space: nowrap; position: relative; }
 .like-btn:hover { border-color: #4a90d9; color: #1a5fa8; background: #e8f0fe; }
 .like-btn.liked { border-color: #4a90d9; color: #fff; background: #3b82f6; }
 .like-btn.liked:hover { background: #2563eb; }
@@ -244,57 +188,31 @@ tr:hover td { background: var(--row-hover) !important; }
 
 /* LIKE POPOVER */
 .like-popover-wrap { position: relative; display: inline-flex; }
-.like-popover {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%) scale(0.95);
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  box-shadow: 0 6px 28px rgba(0,0,0,0.14);
-  min-width: 180px;
-  max-width: 240px;
-  padding: 8px 0;
-  z-index: 400;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s, transform 0.15s;
-  transform-origin: bottom center;
-}
-.like-popover.open {
-  opacity: 1;
-  pointer-events: all;
-  transform: translateX(-50%) scale(1);
-}
-.like-popover-title {
-  font-size: 11px; font-weight: 800; color: var(--text-muted);
-  text-transform: uppercase; letter-spacing: 0.6px;
-  padding: 2px 12px 6px; border-bottom: 1px solid #f0ece4;
-  margin-bottom: 4px;
-}
-.like-popover-item {
-  display: flex; align-items: center; gap: 7px;
-  padding: 5px 12px; font-size: 13px; font-weight: 700; color: #1a6b3a;
-}
+.like-popover { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) scale(0.95); background: #fff; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 6px 28px rgba(0,0,0,0.14); width: max-content; max-width: 320px; padding: 8px 0; z-index: 400; opacity: 0; pointer-events: none; transition: opacity 0.15s, transform 0.15s; transform-origin: bottom center; }
+.like-popover.open { opacity: 1; pointer-events: all; transform: translateX(-50%) scale(1); }
+.like-popover-title { font-size: 11px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; padding: 2px 12px 6px; border-bottom: 1px solid #f0ece4; margin-bottom: 4px; }
+.like-popover-item { display: flex; align-items: center; gap: 6px; padding: 5px 14px; font-size: 13px; font-weight: 700; color: #1a6b3a; white-space: nowrap; }
 .like-popover-item svg { width: 13px; height: 13px; flex-shrink: 0; }
-.like-popover-person { font-size: 12px; font-weight: 500; color: var(--text-muted); margin-left: 2px; }
+.like-popover-person { font-size: 12px; font-weight: 500; color: var(--text-muted); }
+.like-popover-sep { display: inline-block; width: 1px; height: 12px; background: #d4c8b0; margin: 0 4px; }
 .like-popover-empty { padding: 6px 12px; font-size: 13px; color: var(--text-muted); font-style: italic; }
-/* popover arrow */
-.like-popover::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px; height: 10px;
-  background: #fff;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  transform: translateX(-50%) rotate(45deg);
-}
+.like-popover::after { content: ''; position: absolute; bottom: -6px; left: 50%; width: 10px; height: 10px; background: #fff; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transform: translateX(-50%) rotate(45deg); }
 
-/* ACTION BUTTONS */
+/* PAGINATION */
+.dx-pagination { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-top: 1px solid #f0ece4; background: #faf7f2; gap: 12px; }
+.dx-pagination-info { font-size: 14px; color: var(--text-muted); font-weight: 600; flex-shrink: 0; }
+.dx-pagination-info span { color: var(--text-main); font-weight: 800; }
+.dx-pagination-right { display: flex; align-items: center; gap: 10px; }
+.dx-pagination-pages { display: flex; align-items: center; gap: 4px; }
+.dx-page-counter { display: inline-flex; align-items: center; gap: 4px; padding: 4px 11px; background: #fff; border: 1.5px solid var(--border); border-radius: 20px; font-size: 13px; font-weight: 800; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
+.dx-page-counter .pg-cur { color: var(--burgundy); font-size: 14px; }
+.dx-page-counter .pg-sep { color: #c8b890; font-size: 12px; margin: 0 1px; }
+.dx-page-counter .pg-tot { color: var(--text-main); }
+.dx-pg-btn { min-width: 32px; height: 32px; border-radius: 7px; border: 1.5px solid var(--border); background: #fff; cursor: pointer; font-size: 14px; font-weight: 700; color: var(--text-muted); font-family: inherit; display: flex; align-items: center; justify-content: center; padding: 0 6px; transition: all 0.12s; }
+.dx-pg-btn:hover:not(:disabled) { background: #fdf8ee; border-color: #c8b890; color: var(--text-main); }
+.dx-pg-btn.active { background: var(--burgundy); border-color: var(--burgundy); color: #fff; }
+.dx-pg-btn:disabled { opacity: 0.35; cursor: default; }
+.dx-pg-btn svg { width: 14px; height: 14px; }
 .action-btns { display: flex; gap: 4px; justify-content: center; }
 .act-btn { width: 30px; height: 30px; border-radius: 6px; border: 1px solid var(--border); background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.12s; }
 .act-btn svg { width: 14px; height: 14px; }
@@ -395,12 +313,16 @@ tr:hover td { background: var(--row-hover) !important; }
 .html-editor-content { min-height: 120px; padding: 10px 14px; font-size: 14px; font-family: 'Be Vietnam Pro', sans-serif; color: var(--text-main); outline: none; line-height: 1.7; }
 
 /* VIEW MODAL DETAIL */
-.dxcv-noidung-box { background: #faf7f2; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; font-size: 15px; line-height: 1.7; color: var(--text-main); min-height: 80px; margin-bottom: 14px; }
-.dxcv-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.dxcv-meta-item { display: flex; flex-direction: column; gap: 3px; }
-.dxcv-meta-label { font-size: 11px; font-weight: 700; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.5px; }
-.dxcv-meta-value { font-size: 15px; font-weight: 600; color: var(--text-main); }
-.tiep-nhan-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.dxcv-noidung-box { background: #fef9ee; border: 1.5px solid #e8d888; border-radius: 10px; padding: 14px 16px; font-size: 16px; line-height: 1.7; color: var(--text-main); min-height: 80px; margin-bottom: 14px; text-align: left; }
+.dxcv-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #e8d8c0; border-radius: 10px; overflow: hidden; border: 1.5px solid #e8d8c0; }
+.dxcv-meta-item { display: flex; flex-direction: column; gap: 4px; padding: 11px 14px; background: #fffbf4; }
+.dxcv-meta-item:nth-child(even) { background: #fef6e0; }
+.dxcv-meta-item:last-child, .dxcv-meta-item.dxcv-meta-item--full { grid-column: 1 / -1; background: #fdf2d8; }
+.dxcv-meta-label { font-size: 11px; font-weight: 800; color: #8b4a00; text-transform: uppercase; letter-spacing: 0.5px; }
+.dxcv-meta-value { font-size: 16px; font-weight: 600; color: var(--text-main); }
+.dxcv-tiep-nhan-section { margin-top: 14px; padding: 12px 14px; background: #f0f8f2; border: 1.5px solid #b8dfc4; border-radius: 10px; }
+.dxcv-tiep-nhan-label { font-size: 11px; font-weight: 800; color: #1a6b3a; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.tiep-nhan-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .tiep-nhan-item { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; background: #e8f5ee; color: #1a6b3a; border: 1px solid #a0d8b0; border-radius: 20px; font-size: 13px; font-weight: 700; }
 .tiep-nhan-item svg { width: 13px; height: 13px; }
 
@@ -426,6 +348,9 @@ tr:hover td { background: var(--row-hover) !important; }
 .back-to-top.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
 .back-to-top:hover { background: #5a2800; }
 .back-to-top svg { width: 20px; height: 20px; }
+
+/* PAGE CORNER */
+.page-corner { position: fixed; bottom: 0; right: 0; width: 120px; height: 120px; pointer-events: none; z-index: 50; opacity: 0.18; }
 </style>
 </head>
 <body>
@@ -445,30 +370,6 @@ tr:hover td { background: var(--row-hover) !important; }
       </svg>
     </div>
     <span class="app-name">Quản Lý Công Việc</span>
-    <div class="hamburger-wrapper" id="hamburgerWrapper">
-      <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleHamburger(event)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-      </button>
-      <div class="hm-menu" id="hmMenu" onclick="event.stopPropagation()">
-        <div class="hm-header"><span class="hm-header-label">Chức năng</span></div>
-        <div class="hm-item disabled">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-          Tổng Quan
-        </div>
-        <div class="hm-item disabled">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Quản Lý Thành Viên
-        </div>
-        <div class="hm-item disabled">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Quản Lý Công Việc
-        </div>
-        <div class="hm-item active">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18.5" x2="14.5" y2="18.5"/></svg>
-          Đề Xuất Công Việc
-        </div>
-      </div>
-    </div>
   </div>
   <div class="topbar-datetime">
     <span class="dt-duong" id="dtDuong"></span>
@@ -493,6 +394,24 @@ tr:hover td { background: var(--row-hover) !important; }
       </div>
       <div class="ud-menu" id="udMenu" onclick="event.stopPropagation()">
         <div class="ud-header"><div class="ud-name">Phan Tuấn Anh</div><div class="ud-role">Ban Tri Sự · Trưởng Ban</div></div>
+        <div class="ud-section-label">Chức năng</div>
+        <div class="ud-item disabled">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Tổng Quan
+        </div>
+        <div class="ud-item disabled">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Quản Lý Thành Viên
+        </div>
+        <div class="ud-item disabled">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Quản Lý Công Việc
+        </div>
+        <div class="ud-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18.5" x2="14.5" y2="18.5"/></svg>
+          Đề Xuất Công Việc
+        </div>
+        <div class="ud-sep"></div>
         <div class="ud-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
           Cài đặt và quyền riêng tư
@@ -507,6 +426,18 @@ tr:hover td { background: var(--row-hover) !important; }
   </div>
 </div>
 
+<!-- PAGE CORNER -->
+<svg class="page-corner" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M120 120 L0 120 L0 100 Q60 100 60 40 L120 40 Z" fill="#7a3a00" opacity="0.15"/>
+  <path d="M120 120 L30 120 L30 80 Q80 80 80 30 L120 30 Z" fill="#7a3a00" opacity="0.2"/>
+  <path d="M120 120 L60 120 L60 60 L120 60 Z" fill="#7a3a00" opacity="0.25"/>
+  <line x1="120" y1="30" x2="80" y2="30" stroke="#7a3a00" stroke-width="1.5" opacity="0.5"/>
+  <line x1="120" y1="60" x2="60" y2="60" stroke="#7a3a00" stroke-width="1.5" opacity="0.5"/>
+  <line x1="120" y1="90" x2="30" y2="90" stroke="#7a3a00" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="105" cy="105" r="8" fill="#fad96a" opacity="0.6"/>
+  <circle cx="105" cy="105" r="4" fill="#7a3a00" opacity="0.5"/>
+</svg>
+
 <!-- FIXED BOTTOM SCROLLBAR -->
 <div class="fixed-scroll-track" id="fixedScrollTrack">
   <div class="fixed-scroll-inner" id="fixedScrollInner"></div>
@@ -517,29 +448,33 @@ tr:hover td { background: var(--row-hover) !important; }
   <div class="page-header">
     <div class="page-title">
       <div class="page-title-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18.5" x2="14.5" y2="18.5"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
       </div>
       Đề Xuất Công Việc
     </div>
     <button class="btn-propose" onclick="openProposeModal()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-      Đề Xuất Công Việc
+      Thêm Mới
     </button>
   </div>
 
-  <!-- MERGED: Filter + Card Header -->
+  <!-- MERGED TOP -->
   <div class="dxcv-merged-top">
-    <!-- Filter section -->
+    <div class="dxcv-card-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;color:var(--burgundy);flex-shrink:0;"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
+      <span class="dxcv-card-header-title">Danh Sách Đề Xuất</span>
+      <span class="dxcv-card-header-count">(<span id="dx-count">0</span>)</span>
+    </div>
     <div class="dxcv-filter-section">
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Lọc theo ban:</label>
-        <select class="form-select" id="dx-filter-ban" style="width:200px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-ban" style="width:190px;" onchange="renderDxTable()">
           <option value="">— Tất cả các ban —</option>
         </select>
       </div>
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Ưu tiên:</label>
-        <select class="form-select" id="dx-filter-uu" style="width:150px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-uu" style="width:140px;" onchange="renderDxTable()">
           <option value="">— Tất cả —</option>
           <option value="Khẩn cấp">Khẩn cấp</option>
           <option value="Bình thường">Bình thường</option>
@@ -547,23 +482,24 @@ tr:hover td { background: var(--row-hover) !important; }
       </div>
       <div class="filter-group">
         <label class="form-label" style="white-space:nowrap;">Trạng thái:</label>
-        <select class="form-select" id="dx-filter-tt" style="width:160px;" onchange="renderDxTable()">
+        <select class="form-select" id="dx-filter-tt" style="width:155px;" onchange="renderDxTable()">
           <option value="">— Tất cả —</option>
           <option value="Chờ tiếp nhận">Chờ tiếp nhận</option>
           <option value="Đã tiếp nhận">Đã tiếp nhận</option>
         </select>
       </div>
+      <div class="filter-group">
+        <label class="form-label" style="white-space:nowrap;">Tìm kiếm:</label>
+        <div class="filter-search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input class="filter-search-input" id="dx-filter-search" type="text" placeholder="Tìm nội dung..." oninput="renderDxTable()" />
+        </div>
+      </div>
       <button class="btn-reset" onclick="resetDxFilter()">Đặt lại</button>
-    </div>
-    <!-- Card header -->
-    <div class="dxcv-card-header">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;color:var(--burgundy);flex-shrink:0;"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
-      <span class="dxcv-card-header-title">Danh Sách Đề Xuất</span>
-      <span class="dxcv-card-header-count" id="dx-count">0 đề xuất</span>
     </div>
   </div>
 
-  <!-- TABLE (seamlessly connected below) -->
+  <!-- TABLE -->
   <div class="dxcv-table-card">
     <div class="table-wrapper" id="tableWrapper">
       <table id="dxTable">
@@ -572,13 +508,12 @@ tr:hover td { background: var(--row-hover) !important; }
             <th class="dx-col-stt">STT</th>
             <th class="dx-col-tieu">Tiêu đề</th>
             <th class="dx-col-noidung">Nội dung</th>
-            <th class="dx-col-ban-de">Ban đề xuất</th>
-            <th class="dx-col-ban-nhan">Ban được đề xuất</th>
+            <th class="dx-col-ban">Ban đề xuất → Nhận</th>
             <th class="dx-col-uu">Ưu tiên</th>
             <th class="dx-col-tgian">Thời hạn</th>
             <th class="dx-col-tt">Trạng thái</th>
             <th class="dx-col-like">Tiếp nhận</th>
-            <th class="dx-col-ghichu">Ghi chú</th>
+            <th class="dx-col-ghichu" style="text-align:left;">Ghi chú</th>
             <th class="dx-col-thaotac">Thao tác</th>
           </tr>
         </thead>
@@ -587,6 +522,18 @@ tr:hover td { background: var(--row-hover) !important; }
       <div id="dxEmptyState" class="empty-state" style="display:none;">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
         <p>Chưa có đề xuất công việc nào.</p>
+      </div>
+    </div>
+    <div class="dx-pagination" id="dxPagination">
+      <div class="dx-pagination-info" id="dxPgInfo">Hiển thị <span id="dxPgShowing">0</span>/<span id="dxPgTotal">0</span> đề xuất</div>
+      <div class="dx-pagination-right">
+        <div class="dx-pagination-pages" id="dxPgPages"></div>
+        <div class="dx-page-counter" id="dxPageCounter" style="display:none;">
+          <span class="pg-cur" id="dxCurPage">1</span>
+          <span class="pg-sep">/</span>
+          <span class="pg-tot" id="dxTotPage">1</span>
+          <span style="font-size:11px;color:#b09070;margin-left:2px;">trang</span>
+        </div>
       </div>
     </div>
   </div>
@@ -623,7 +570,7 @@ tr:hover td { background: var(--row-hover) !important; }
             <div class="add-label">Độ ưu tiên <span class="req">*</span></div>
             <select class="add-select" id="px_uutien">
               <option value="Bình thường">Bình thường</option>
-              <option value="Khẩn cấp">🔴 Khẩn cấp</option>
+              <option value="Khẩn cấp">Khẩn cấp</option>
             </select>
           </div>
           <div>
@@ -678,7 +625,7 @@ tr:hover td { background: var(--row-hover) !important; }
   </div>
 </div>
 
-<!-- MODAL: XEM CHI TIẾT ĐỀ XUẤT -->
+<!-- MODAL: XEM CHI TIẾT -->
 <div class="modal-overlay" id="dxViewModal">
   <div class="add-modal" style="max-width:660px;" onclick="event.stopPropagation()">
     <div class="add-modal-header">
@@ -723,11 +670,11 @@ function lunLeapOff(a11,tz){const k=Math.floor((a11-2415021.076998695)/29.530588
 function solar2Lunar(d,m,y){const tz=7,jd=lunJd(d,m,y),k=Math.floor((jd-2415021.076998695)/29.530588853);let ms=lunNewMoon(k+1,tz);if(ms>jd)ms=lunNewMoon(k,tz);let a11=lunMonth11(y,tz),b11=a11,ly;if(a11>=ms){ly=y;a11=lunMonth11(y-1,tz);}else{ly=y+1;b11=lunMonth11(y+1,tz);}const lday=jd-ms+1,diff=Math.floor((ms-a11)/29);let leap=0,lm=diff+11;if(b11-a11>365){const lo=lunLeapOff(a11,tz);if(diff>=lo){lm=diff+10;if(diff===lo)leap=1;}}if(lm>12)lm-=12;if(lm>=11&&diff<4)ly--;return{day:lday,month:lm,year:ly,isLeap:leap===1,can:LUN_CAN[(ly+6)%10],chi:LUN_CHI[(ly+8)%12]};}
 
 function fmtLunar(dateStr){
-  if(!dateStr) return '—';
-  const p = dateStr.split('-');
-  if(!p[0]||!p[1]||!p[2]) return '—';
-  const lun = solar2Lunar(parseInt(p[2]), parseInt(p[1]), parseInt(p[0]));
-  return `${lun.day}/${lun.month}${lun.isLeap?' (nhuận)':''} Âm Lịch`;
+  if(!dateStr)return'—';
+  const p=dateStr.split('-');
+  if(!p[0]||!p[1]||!p[2])return'—';
+  const lun=solar2Lunar(parseInt(p[2]),parseInt(p[1]),parseInt(p[0]));
+  return`${lun.day}/${lun.month}${lun.isLeap?' (n)':''} ÂL`;
 }
 
 (function(){const n=new Date();const lun=solar2Lunar(n.getDate(),n.getMonth()+1,n.getFullYear());const THU=['Chủ Nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];const dd=String(n.getDate()).padStart(2,'0'),mm=String(n.getMonth()+1).padStart(2,'0');document.getElementById('dtDuong').textContent=`${THU[n.getDay()]}, ${dd}/${mm}/${n.getFullYear()}`;document.getElementById('dtAm').textContent=`🌙 ${lun.day}/${lun.month} Âm Lịch`;})();
@@ -753,74 +700,39 @@ document.addEventListener('click',()=>{if(ndpOpenId){ndpOpenId=null;Object.keys(
 
 /* CONSTANTS */
 const ALL_BANS=['Ban An Ninh','Ban An Sinh','Ban Bảo Tàng','Ban Cơ Giới - Vận Tải','Ban Chăm Sóc Người Cao Tuổi','Ban Đời Sống','Ban Giáo Dục Thanh Thiếu Niên','Ban Hành Hương','Ban Hỗ Trợ Chùa Vệ Tinh','Ban Hướng Dẫn Phật Tử','Ban Hương Đăng','Ban May','Ban Môi Trường','Ban Nghi Lễ','Ban Nhân Sự - Tiền Lương','Ban Quản Chúng','Ban Quản Lý Dự Án','Ban Quốc Tế','Ban Tài Chính','Ban Trang Trí Khánh Tiết','Ban Tổ Chức Sự Kiện','Ban Thị Giả','Ban Thư Viện','Ban Tiếp Tăng Độ Chúng','Ban Tri Khố','Ban Tri Sự','Ban Vật Tư','Ban Văn Hóa Truyền Thông','Ban Văn Phòng','Ban Vườn','Ban Y Tế'];
-const CURRENT_USER = { ten: 'Phan Tuấn Anh', chucDanh: 'Trưởng Ban', ban: 'Ban Tri Sự' };
+const CURRENT_USER={ten:'Phan Tuấn Anh',chucDanh:'Trưởng Ban',ban:'Ban Tri Sự'};
 
-let proposeDB = [
-  { id:1, banA:'Ban Tri Sự', nguoiTao:'Phan Tuấn Anh', chucDanhTao:'Trưởng Ban', banB:'Ban Tri Sự', tieude:'Hỗ trợ chuẩn bị đèn nến cho Đại Lễ Phật Đản', noidung:'<p>Kính đề xuất Ban Hương Đăng hỗ trợ chuẩn bị toàn bộ đèn nến, hương liệu phục vụ Đại Lễ Phật Đản 2026. Số lượng dự kiến khoảng 500 cây nến và 200 bó nhang.</p>', uutien:'Khẩn cấp', thoihan:'2026-05-15', diadiem:'Chánh điện tầng 1', lienhe:'Phan Tuấn Anh - 0901234567', ghichu:'Cần hoàn tất trước ngày 15/05', ngayTao:'2026-05-08', trangThai:'Đã tiếp nhận', likers:[{ban:'Ban Hương Đăng',nguoi:'Nguyễn Minh Phúc'}], likedByMe:false, daChinhSua:false, ngayChinhSua:null },
-  { id:2, banA:'Ban Văn Hóa Truyền Thông', nguoiTao:'Lê Thanh Hương', chucDanhTao:'Phó Ban', banB:'Ban Tri Sự', tieude:'Phối hợp ghi hình buổi lễ Vu Lan tháng 7', noidung:'<p>Đề xuất Ban Tổ Chức Sự Kiện phối hợp cung cấp lịch trình chi tiết và địa điểm cụ thể để Ban Văn Hóa Truyền Thông bố trí ekip quay phim chuyên nghiệp.</p>', uutien:'Bình thường', thoihan:'2026-06-20', diadiem:'Hội trường lớn', lienhe:'Lê Thanh Hương - 0912345678', ghichu:'', ngayTao:'2026-05-09', trangThai:'Chờ tiếp nhận', likers:[], likedByMe:false, daChinhSua:false, ngayChinhSua:null },
-  { id:3, banA:'Ban Y Tế', nguoiTao:'Trần Thị Mai', chucDanhTao:'Tổ Trưởng', banB:'Ban Tri Sự', tieude:'Hỗ trợ khám sức khoẻ miễn phí cho Phật tử cao tuổi', noidung:'<p>Ban Y Tế đề xuất phối hợp với Ban An Sinh tổ chức buổi khám sức khoẻ và phát thuốc miễn phí cho Phật tử cao tuổi, dự kiến 200-300 người tham gia.</p>', uutien:'Bình thường', thoihan:'2026-05-28', diadiem:'Phòng họp B2', lienhe:'Trần Thị Mai - 0923456789', ghichu:'Cần đăng ký trước 1 tuần', ngayTao:'2026-05-10', trangThai:'Chờ tiếp nhận', likers:[], likedByMe:false, daChinhSua:false, ngayChinhSua:null }
+let proposeDB=[
+  {id:1,banA:'Ban Hương Đăng',nguoiTao:'Phan Tuấn Anh',chucDanhTao:'Trưởng Ban',banB:'Ban Tri Sự',tieude:'Hỗ trợ chuẩn bị đèn nến cho Đại Lễ Phật Đản',noidung:'<p>Kính đề xuất Ban Hương Đăng hỗ trợ chuẩn bị toàn bộ đèn nến, hương liệu phục vụ Đại Lễ Phật Đản 2026. Số lượng dự kiến khoảng 500 cây nến và 200 bó nhang.</p>',uutien:'Khẩn cấp',thoihan:'2026-05-15',diadiem:'Chánh điện tầng 1',lienhe:'Phan Tuấn Anh - 0901234567',ghichu:'Cần hoàn tất trước ngày 15/05',ngayTao:'2026-05-08',trangThai:'Đã tiếp nhận',likers:[{ban:'Ban Hương Đăng',nguoi:'Nguyễn Minh Phúc'}],likedByMe:false,daChinhSua:false,ngayChinhSua:null},
+  {id:2,banA:'Ban Văn Hóa Truyền Thông',nguoiTao:'Lê Thanh Hương',chucDanhTao:'Phó Ban',banB:'Ban Tri Sự',tieude:'Phối hợp ghi hình buổi lễ Vu Lan tháng 7',noidung:'<p>Đề xuất Ban Tổ Chức Sự Kiện phối hợp cung cấp lịch trình chi tiết và địa điểm cụ thể để Ban Văn Hóa Truyền Thông bố trí ekip quay phim chuyên nghiệp.</p>',uutien:'Bình thường',thoihan:'2026-06-20',diadiem:'Hội trường lớn',lienhe:'Lê Thanh Hương - 0912345678',ghichu:'',ngayTao:'2026-05-09',trangThai:'Chờ tiếp nhận',likers:[],likedByMe:false,daChinhSua:false,ngayChinhSua:null},
+  {id:3,banA:'Ban Y Tế',nguoiTao:'Trần Thị Mai',chucDanhTao:'Tổ Trưởng',banB:'Ban Tri Sự',tieude:'Hỗ trợ khám sức khoẻ miễn phí cho Phật tử cao tuổi',noidung:'<p>Ban Y Tế đề xuất phối hợp với Ban An Sinh tổ chức buổi khám sức khoẻ và phát thuốc miễn phí cho Phật tử cao tuổi, dự kiến 200-300 người tham gia.</p>',uutien:'Bình thường',thoihan:'2026-05-28',diadiem:'Phòng họp B2',lienhe:'Trần Thị Mai - 0923456789',ghichu:'Cần đăng ký trước 1 tuần',ngayTao:'2026-05-10',trangThai:'Chờ tiếp nhận',likers:[],likedByMe:false,daChinhSua:false,ngayChinhSua:null}
 ];
-let proposeCounter = 4;
-let editingDxId = null;
-let deletingDxId = null;
+let proposeCounter=4,editingDxId=null,deletingDxId=null;
 
 /* LIKE POPOVER */
-let openLikePopoverId = null;
-function toggleLikePopover(id, e) {
-  e.stopPropagation();
-  if (openLikePopoverId === id) {
-    openLikePopoverId = null;
-  } else {
-    openLikePopoverId = id;
-  }
-  renderDxTable();
-}
-document.addEventListener('click', () => {
-  if (openLikePopoverId !== null) {
-    openLikePopoverId = null;
-    renderDxTable();
-  }
-});
+let openLikePopoverId=null;
+document.addEventListener('click',()=>{if(openLikePopoverId!==null){openLikePopoverId=null;renderDxTable();}});
 
 /* TOPBAR */
-let hmOpen=false, udOpen=false;
-function toggleHamburger(e){e.stopPropagation();if(udOpen){udOpen=false;document.getElementById('udMenu').classList.remove('open');}hmOpen=!hmOpen;document.getElementById('hmMenu').classList.toggle('open',hmOpen);document.getElementById('hamburgerBtn').classList.toggle('active',hmOpen);}
-function toggleUserMenu(e){e.stopPropagation();if(hmOpen){hmOpen=false;document.getElementById('hmMenu').classList.remove('open');document.getElementById('hamburgerBtn').classList.remove('active');}udOpen=!udOpen;document.getElementById('udMenu').classList.toggle('open',udOpen);}
-document.addEventListener('click',()=>{hmOpen=false;udOpen=false;const hm=document.getElementById('hmMenu');const ud=document.getElementById('udMenu');if(hm)hm.classList.remove('open');if(ud)ud.classList.remove('open');document.getElementById('hamburgerBtn').classList.remove('active');});
+let udOpen=false;
+function toggleUserMenu(e){e.stopPropagation();udOpen=!udOpen;document.getElementById('udMenu').classList.toggle('open',udOpen);}
+document.addEventListener('click',()=>{udOpen=false;const ud=document.getElementById('udMenu');if(ud)ud.classList.remove('open');});
 window.addEventListener('scroll',()=>{document.getElementById('backToTop').classList.toggle('visible',window.scrollY>300);updateFixedScrollPos();});
 
 /* FIXED BOTTOM SCROLLBAR */
 function initFixedScroll(){
-  const track = document.getElementById('fixedScrollTrack');
-  const wrapper = document.getElementById('tableWrapper');
-  const inner = document.getElementById('fixedScrollInner');
-  function updateWidth(){
-    const rect = wrapper.getBoundingClientRect();
-    const scrollW = wrapper.scrollWidth;
-    const clientW = wrapper.clientWidth;
-    inner.style.width = scrollW + 'px';
-    if(scrollW > clientW){
-      track.style.display = 'block';
-      track.style.left = rect.left + 'px';
-      track.style.width = rect.width + 'px';
-    } else {
-      track.style.display = 'none';
-    }
-  }
-  track.addEventListener('scroll', () => {
-    if(!track._fromTable){ track._fromFixed = true; wrapper.scrollLeft = track.scrollLeft; requestAnimationFrame(()=>{ track._fromFixed = false; }); }
-  });
-  wrapper.addEventListener('scroll', () => {
-    if(!track._fromFixed){ track._fromTable = true; track.scrollLeft = wrapper.scrollLeft; requestAnimationFrame(()=>{ track._fromTable = false; }); }
-  });
-  const ro = new ResizeObserver(updateWidth);
-  ro.observe(wrapper);
-  ro.observe(document.getElementById('dxTable'));
-  window.addEventListener('resize', updateWidth);
-  updateWidth();
-  window._updateFixedScrollPos = updateWidth;
+  const track=document.getElementById('fixedScrollTrack');
+  const wrapper=document.getElementById('tableWrapper');
+  const inner=document.getElementById('fixedScrollInner');
+  function updateWidth(){const rect=wrapper.getBoundingClientRect();const scrollW=wrapper.scrollWidth,clientW=wrapper.clientWidth;inner.style.width=scrollW+'px';if(scrollW>clientW){track.style.display='block';track.style.left=rect.left+'px';track.style.width=rect.width+'px';}else{track.style.display='none';}}
+  track.addEventListener('scroll',()=>{if(!track._fromTable){track._fromFixed=true;wrapper.scrollLeft=track.scrollLeft;requestAnimationFrame(()=>{track._fromFixed=false;});}});
+  wrapper.addEventListener('scroll',()=>{if(!track._fromFixed){track._fromTable=true;track.scrollLeft=wrapper.scrollLeft;requestAnimationFrame(()=>{track._fromTable=false;});}});
+  const ro=new ResizeObserver(updateWidth);
+  ro.observe(wrapper);ro.observe(document.getElementById('dxTable'));
+  window.addEventListener('resize',updateWidth);updateWidth();
+  window._updateFixedScrollPos=updateWidth;
 }
-function updateFixedScrollPos(){ if(window._updateFixedScrollPos) window._updateFixedScrollPos(); }
+function updateFixedScrollPos(){if(window._updateFixedScrollPos)window._updateFixedScrollPos();}
 
 /* HELPERS */
 function fmtDate(d){if(!d)return'—';const p=d.split('-');return`${p[2]}/${p[1]}/${p[0]}`;}
@@ -844,64 +756,54 @@ function initBanDropdowns(){
   });
 }
 
+const PAGE_SIZE=10;
+let currentPage=1,filteredData=[];
+
 /* RENDER TABLE */
 function renderDxTable(){
   const filterBan=document.getElementById('dx-filter-ban').value;
   const filterUu=document.getElementById('dx-filter-uu').value;
   const filterTT=document.getElementById('dx-filter-tt').value;
-  let data=proposeDB.filter(p=>{
+  const filterSearch=(document.getElementById('dx-filter-search')?.value||'').trim().toLowerCase();
+  filteredData=proposeDB.filter(p=>{
     if(filterBan&&p.banB!==filterBan&&p.banA!==filterBan)return false;
     if(filterUu&&p.uutien!==filterUu)return false;
     if(filterTT&&p.trangThai!==filterTT)return false;
+    if(filterSearch){const hay=(p.tieude+' '+stripHtml(p.noidung)+' '+p.ghichu).toLowerCase();if(!hay.includes(filterSearch))return false;}
     return true;
   });
-  document.getElementById('dx-count').textContent=`${data.length} đề xuất`;
+  const totalPages=Math.max(1,Math.ceil(filteredData.length/PAGE_SIZE));
+  if(currentPage>totalPages)currentPage=1;
+  document.getElementById('dx-count').textContent=filteredData.length;
   const tbody=document.getElementById('dxTableBody');
   const empty=document.getElementById('dxEmptyState');
-  if(data.length===0){
-    tbody.innerHTML='';
-    empty.style.display='block';
-  } else {
+  if(filteredData.length===0){
+    tbody.innerHTML='';empty.style.display='block';renderPagination(0,0,1,1);
+  }else{
     empty.style.display='none';
-    tbody.innerHTML=data.map((p,i)=>{
+    const start=(currentPage-1)*PAGE_SIZE;
+    const end=Math.min(start+PAGE_SIZE,filteredData.length);
+    const pageData=filteredData.slice(start,end);
+    tbody.innerHTML=pageData.map((p,i)=>{
+      const globalIdx=start+i;
       const uuBadge=p.uutien==='Khẩn cấp'
-        ?`<span class="badge badge-khan">🔴 Khẩn cấp</span>`
+        ?`<span class="badge badge-khan">Khẩn cấp</span>`
         :`<span class="badge badge-binh">Bình thường</span>`;
       const ttBadge=p.trangThai==='Đã tiếp nhận'
         ?`<span class="badge badge-da-tiep"><span class="dot dot-green"></span>Đã tiếp nhận</span>`
         :`<span class="badge badge-cho-tiep"><span class="dot dot-amber"></span>Chờ tiếp nhận</span>`;
-
       const likeIcon=p.likedByMe
         ?`<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>`
         :`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>`;
-
-      const likeCount = p.likers.length;
-      const likeLabel = p.likedByMe ? likeCount : (likeCount > 0 ? likeCount : 'Tiếp nhận');
-      const likeCls = p.likedByMe ? 'like-btn liked' : 'like-btn';
-      const isPopoverOpen = openLikePopoverId === p.id;
-
-      /* Popover content */
-      let popoverHtml = '';
-      if (likeCount > 0) {
-        const popoverItems = p.likers.map(l =>
-          `<div class="like-popover-item">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>
-            ${l.ban} <span class="like-popover-person">${l.nguoi}</span>
-          </div>`
-        ).join('');
-        popoverHtml = `<div class="like-popover${isPopoverOpen?' open':''}" onclick="event.stopPropagation()">
-          <div class="like-popover-title">Đã tiếp nhận (${likeCount})</div>
-          ${popoverItems}
-        </div>`;
+      const likeCount=p.likers.length;
+      const likeLabel=p.likedByMe?likeCount:(likeCount>0?likeCount:'Tiếp nhận');
+      const likeCls=p.likedByMe?'like-btn liked':'like-btn';
+      const isPopoverOpen=openLikePopoverId===p.id;
+      let popoverHtml='';
+      if(likeCount>0){
+        const popoverItems=p.likers.map(l=>`<div class="like-popover-item"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:13px;height:13px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>${l.ban}<span class="like-popover-sep"></span><span class="like-popover-person">${l.nguoi}</span></div>`).join('');
+        popoverHtml=`<div class="like-popover${isPopoverOpen?' open':''}" onclick="event.stopPropagation()"><div class="like-popover-title">Đã tiếp nhận (${likeCount})</div>${popoverItems}</div>`;
       }
-
-      const likeCell = `<div class="like-cell-wrap">
-        <div class="like-popover-wrap">
-          <button class="${likeCls}" onclick="handleLikeClick(${p.id}, event)">${likeIcon} ${likeLabel}</button>
-          ${popoverHtml}
-        </div>
-      </div>`;
-
       const dateDisplay=p.thoihan
         ?`<span style="font-weight:800;color:var(--text-main);font-size:16px;">${fmtLunar(p.thoihan)}</span>`
         :`<span style="color:var(--text-muted);">—</span>`;
@@ -909,73 +811,71 @@ function renderDxTable(){
         ?`<span class="dx-col-ghichu-text">${truncate20words(p.ghichu)}</span>`
         :`<span style="color:#c0b898;font-size:14px;font-style:italic;">—</span>`;
       const dasuaBadge=p.daChinhSua?`<br><span class="badge-da-sua">✏ Đã sửa</span>`:'';
-      const noidungText=truncate20words(stripHtml(p.noidung));
-
-      return `<tr>
-        <td class="dx-col-stt"><span class="stt-num">${i+1}</span></td>
+      const noidungText=stripHtml(p.noidung);
+      return`<tr>
+        <td class="dx-col-stt"><span class="stt-num">${globalIdx+1}</span></td>
         <td class="dx-col-tieu"><span style="font-weight:700;font-size:17px;">${p.tieude}</span>${dasuaBadge}</td>
         <td class="dx-col-noidung"><span class="dx-col-noidung-text">${noidungText||'—'}</span></td>
-        <td class="dx-col-ban-de"><span class="ban-tag-wrap">${p.banA}</span></td>
-        <td class="dx-col-ban-nhan"><span class="ban-tag-wrap blue">${p.banB}</span></td>
+        <td class="dx-col-ban"><div class="ban-arrow-cell"><span class="ban-tag-wrap">${p.banA}</span><span class="ban-arrow">↓</span><span class="ban-tag-wrap blue">${p.banB}</span></div></td>
         <td class="dx-col-uu">${uuBadge}</td>
         <td class="dx-col-tgian">${dateDisplay}</td>
         <td class="dx-col-tt">${ttBadge}</td>
-        <td class="dx-col-like" style="text-align:center;">${likeCell}</td>
+        <td class="dx-col-like"><div class="like-cell-wrap"><div class="like-popover-wrap"><button class="${likeCls}" onclick="handleLikeClick(${p.id},event)">${likeIcon} ${likeLabel}</button>${popoverHtml}</div></div></td>
         <td class="dx-col-ghichu">${ghichuDisplay}</td>
         <td class="dx-col-thaotac">
           <div class="action-btns">
-            <button class="act-btn view" title="Xem chi tiết" onclick="openDxViewModal(${p.id})">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </button>
-            <button class="act-btn edit" title="Chỉnh sửa" onclick="openDxEditModal(${p.id})">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-            </button>
-            <button class="act-btn del" title="Xóa" onclick="openDxDeleteConfirm(${p.id})">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
-            </button>
+            <button class="act-btn view" title="Xem chi tiết" onclick="openDxViewModal(${p.id})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="act-btn edit" title="Chỉnh sửa" onclick="openDxEditModal(${p.id})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+            <button class="act-btn del" title="Xóa" onclick="openDxDeleteConfirm(${p.id})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></button>
           </div>
         </td>
       </tr>`;
     }).join('');
+    renderPagination(end-start,filteredData.length,currentPage,totalPages);
   }
-  setTimeout(()=>{ if(window._updateFixedScrollPos) window._updateFixedScrollPos(); }, 0);
+  setTimeout(()=>{if(window._updateFixedScrollPos)window._updateFixedScrollPos();},0);
 }
 
+function renderPagination(showing,total,page,totalPages){
+  document.getElementById('dxPgShowing').textContent=showing;
+  document.getElementById('dxPgTotal').textContent=total;
+  const counter=document.getElementById('dxPageCounter');
+  if(totalPages>1){counter.style.display='inline-flex';document.getElementById('dxCurPage').textContent=page;document.getElementById('dxTotPage').textContent=totalPages;}
+  else{counter.style.display='none';}
+  const pgEl=document.getElementById('dxPgPages');
+  if(totalPages<=1){pgEl.innerHTML='';return;}
+  let html=`<button class="dx-pg-btn" onclick="goPage(${page-1})" ${page===1?'disabled':''}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>`;
+  for(let i=1;i<=totalPages;i++){
+    if(totalPages>7&&i>2&&i<totalPages-1&&Math.abs(i-page)>1){if(i===3||i===totalPages-2)html+=`<button class="dx-pg-btn" disabled style="border:none;background:none;">…</button>`;continue;}
+    html+=`<button class="dx-pg-btn${i===page?' active':''}" onclick="goPage(${i})">${i}</button>`;
+  }
+  html+=`<button class="dx-pg-btn" onclick="goPage(${page+1})" ${page===totalPages?'disabled':''}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>`;
+  pgEl.innerHTML=html;
+}
+function goPage(p){currentPage=p;renderDxTable();}
 function resetDxFilter(){
   document.getElementById('dx-filter-ban').value='';
   document.getElementById('dx-filter-uu').value='';
   document.getElementById('dx-filter-tt').value='';
+  const s=document.getElementById('dx-filter-search');if(s)s.value='';
   renderDxTable();
 }
 
-/* HANDLE LIKE CLICK: if likers exist → toggle popover; also toggle like */
-function handleLikeClick(id, e) {
+/* LIKE CLICK */
+function handleLikeClick(id,e){
   e.stopPropagation();
-  const p = proposeDB.find(x => x.id === id);
-  if (!p) return;
-
-  // If there are already likers and not my own click-to-like, show popover first
-  // Simple logic: click = like/unlike + show popover if has likers
   toggleLike(id);
-  // After toggling, if has likers show popover
-  const updated = proposeDB.find(x => x.id === id);
-  if (updated.likers.length > 0) {
-    openLikePopoverId = (openLikePopoverId === id) ? null : id;
-  } else {
-    openLikePopoverId = null;
-  }
+  const updated=proposeDB.find(x=>x.id===id);
+  if(updated.likers.length>0){openLikePopoverId=(openLikePopoverId===id)?null:id;}
+  else{openLikePopoverId=null;}
   renderDxTable();
 }
 
 /* PROPOSE MODAL */
 function openProposeModal(){
   editingDxId=null;
-  document.getElementById('proposeModalTitle').innerHTML=`
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
-    Đề Xuất Công Việc`;
-  document.getElementById('proposeSaveBtn').innerHTML=`
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-    Lưu & Gửi Đề Xuất`;
+  document.getElementById('proposeModalTitle').innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg> Đề Xuất Công Việc`;
+  document.getElementById('proposeSaveBtn').innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Lưu & Gửi Đề Xuất`;
   document.getElementById('px_ban_b').value='';
   document.getElementById('px_tieude').value='';
   document.getElementById('px_noidung').innerHTML='';
@@ -989,16 +889,11 @@ function openProposeModal(){
   document.getElementById('proposeModal').classList.add('show');
   document.body.style.overflow='hidden';
 }
-
 function openDxEditModal(id){
   const p=proposeDB.find(x=>x.id===id);if(!p)return;
   editingDxId=id;
-  document.getElementById('proposeModalTitle').innerHTML=`
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-    Chỉnh Sửa Đề Xuất`;
-  document.getElementById('proposeSaveBtn').innerHTML=`
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>
-    Lưu Thay Đổi`;
+  document.getElementById('proposeModalTitle').innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Chỉnh Sửa Đề Xuất`;
+  document.getElementById('proposeSaveBtn').innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg> Lưu Thay Đổi`;
   document.getElementById('px_ban_a_select').value=p.banA;
   document.getElementById('px_ban_b').value=p.banB;
   document.getElementById('px_tieude').value=p.tieude;
@@ -1012,7 +907,6 @@ function openDxEditModal(id){
   document.getElementById('proposeModal').classList.add('show');
   document.body.style.overflow='hidden';
 }
-
 function closeProposeModal(){document.getElementById('proposeModal').classList.remove('show');document.body.style.overflow='';editingDxId=null;}
 
 function savePropose(){
@@ -1033,7 +927,7 @@ function savePropose(){
     const p=proposeDB.find(x=>x.id===editingDxId);
     if(p)Object.assign(p,{banA,banB,tieude,noidung,uutien,thoihan,diadiem,lienhe,ghichu,daChinhSua:true,ngayChinhSua:new Date().toISOString()});
     closeProposeModal();renderDxTable();showToast('✅ Đã cập nhật đề xuất thành công!');
-  } else {
+  }else{
     const now=new Date();
     proposeDB.unshift({id:proposeCounter++,banA,nguoiTao:CURRENT_USER.ten,chucDanhTao:CURRENT_USER.chucDanh,banB,tieude,noidung,uutien,thoihan,diadiem,lienhe,ghichu,ngayTao:`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`,trangThai:'Chờ tiếp nhận',likers:[],likedByMe:false,daChinhSua:false,ngayChinhSua:null});
     closeProposeModal();renderDxTable();showToast('✅ Đã gửi đề xuất thành công!');
@@ -1058,17 +952,17 @@ function toggleLike(id){
 /* VIEW MODAL */
 function openDxViewModal(id){
   const p=proposeDB.find(x=>x.id===id);if(!p)return;
-  const uuBadge=p.uutien==='Khẩn cấp'?`<span class="badge badge-khan">🔴 Khẩn cấp</span>`:`<span class="badge badge-binh">Bình thường</span>`;
+  const uuBadge=p.uutien==='Khẩn cấp'?`<span class="badge badge-khan">Khẩn cấp</span>`:`<span class="badge badge-binh">Bình thường</span>`;
   const ttBadge=p.trangThai==='Đã tiếp nhận'?`<span class="badge badge-da-tiep"><span class="dot dot-green"></span>Đã tiếp nhận</span>`:`<span class="badge badge-cho-tiep"><span class="dot dot-amber"></span>Chờ tiếp nhận</span>`;
   let likersHtml=p.likers.length>0
     ?`<div class="tiep-nhan-list">${p.likers.map(l=>`<span class="tiep-nhan-item"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:13px;height:13px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>${l.ban} <span style="font-weight:500;opacity:0.75;">(${l.nguoi})</span></span>`).join('')}</div>`
-    :`<span style="color:var(--text-muted);font-style:italic;">Chưa có ban tiếp nhận</span>`;
+    :`<span style="color:var(--text-muted);font-style:italic;font-size:15px;">Chưa có ban tiếp nhận</span>`;
   const chinhSuaHtml=p.daChinhSua&&p.ngayChinhSua
     ?`<div style="margin-bottom:14px;padding:8px 14px;background:#f5e8fe;border:1px solid #d0a0f0;border-radius:8px;display:flex;align-items:center;gap:8px;"><span class="badge-da-sua">✏ Đã sửa</span><span style="font-size:12px;color:#6b1a8b;font-weight:600;">Lần cuối: ${fmtDateTime(p.ngayChinhSua)}</span></div>`:'';
   document.getElementById('dxViewModalBody').innerHTML=`
     ${chinhSuaHtml}
     <div style="margin-bottom:14px;">
-      <div style="font-size:16px;font-weight:800;color:var(--text-main);margin-bottom:8px;">${p.tieude}</div>
+      <div style="font-size:17px;font-weight:800;color:var(--text-main);margin-bottom:8px;">${p.tieude}</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">${uuBadge}${ttBadge}</div>
     </div>
     <div class="add-label" style="margin-bottom:6px;">Nội dung đề xuất</div>
@@ -1082,10 +976,10 @@ function openDxViewModal(id){
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Thời hạn (Âm lịch)</div><div class="dxcv-meta-value" style="font-weight:800;color:var(--green-text);">${p.thoihan?fmtLunar(p.thoihan):'—'}</div></div>
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Địa điểm tiếp nhận</div><div class="dxcv-meta-value">${p.diadiem||'—'}</div></div>
       <div class="dxcv-meta-item"><div class="dxcv-meta-label">Người liên hệ</div><div class="dxcv-meta-value">${p.lienhe||'—'}</div></div>
-      <div class="dxcv-meta-item dxcv-meta-item--full" style="grid-column:1/-1;"><div class="dxcv-meta-label">Ghi chú</div><div class="dxcv-meta-value" style="font-style:${p.ghichu?'normal':'italic'};color:${p.ghichu?'var(--text-main)':'var(--text-muted)'};">${p.ghichu||'Không có'}</div></div>
+      <div class="dxcv-meta-item dxcv-meta-item--full"><div class="dxcv-meta-label">Ghi chú</div><div class="dxcv-meta-value" style="font-style:${p.ghichu?'normal':'italic'};color:${p.ghichu?'var(--text-main)':'var(--text-muted)'};">${p.ghichu||'Không có'}</div></div>
     </div>
-    <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
-      <div class="dxcv-meta-label" style="margin-bottom:8px;">BAN ĐÃ TIẾP NHẬN (${p.likers.length} lượt)</div>
+    <div class="dxcv-tiep-nhan-section">
+      <div class="dxcv-tiep-nhan-label">Ban đã tiếp nhận (${p.likers.length} lượt)</div>
       ${likersHtml}
     </div>`;
   document.getElementById('dxViewModal').classList.add('show');
